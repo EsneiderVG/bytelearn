@@ -1,0 +1,41 @@
+@import "vars.css";
+
+.gp-100{
+    gap: 100px;
+}
+
+footer{
+    color: #ffffff;
+    padding: 0px var(--pd-page);
+    background: var(--back-footer);
+}
+
+.item-fot{
+    margin-bottom: 10px;
+    padding: 40px 0px;
+    flex: 1;
+}
+
+.item-fot p{
+    margin-bottom: 40px;
+}
+
+
+.foot-down{
+    text-align: left;
+    padding: var(--pd-page) 0px;
+}
+
+.foot-down p{
+    flex: 1;
+}
+
+.imgs-foot{
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.imgs-foot img{
+    width: 90px;
+}

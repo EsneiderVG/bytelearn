@@ -1,0 +1,129 @@
+@import "vars.css";
+/* Variables */
+
+*{
+    transition: all 0.3;
+}
+
+:root {
+    --submenu-hover-bck: #30697b;
+    --padding-h: 20px 40px;
+    --color-h: white;
+    /* color principal  */
+    --color-p: #30a6eb;
+    --color-p-hover: #4f9bff;
+    --background-color2: #112125;
+    --back-color: #0e1c1d;
+    --pd-page: 40px;
+    --back-footer: #0c171a;
+}
+
+.text-white{
+    color: white;
+}
+
+.title-xxl{
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.fnt-18{
+    font-size: 18px;
+}
+
+.w-xx{
+    max-width: 500px;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.w-95-a{
+    margin: 0px auto;
+    width: 95%;
+}
+
+.mg-bt-20{
+    margin-bottom: 20px;
+}
+
+.mg-bt-60{
+    margin-bottom: 60px;
+}
+
+.mg-tp-60{
+    margin-top: 60px;
+}
+
+.pd-10{
+    padding: 10px;
+}
+
+.pd-20{
+    padding: 20px;
+}
+
+.justify-space{
+    justify-content: space-between;
+}
+.justify-space-a{
+    justify-content: space-around;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.row-flex,
+.row-flex-sep{
+    display: flex;
+}
+
+.col-flex{
+    display: flex;
+    flex-direction: column;
+}
+.center-x{
+    align-items: center;
+}
+.gp-50{
+    gap: 50px;
+}
+
+.gp-20{
+    gap: 20px;
+}
+
+.ul-list-delete{
+    list-style: none;
+}
+
+button{
+    background: var(--color-p);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.btn-a{
+    background: var(--color-p);
+    padding: 5px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    align-self: center;
+    align-content: center;
+}
+
+
+
+.btn-a:hover, button:hover{
+    background: var(--color-p-hover);
+}
+
+button:hover{
+    padding: 12px 35px;
+}

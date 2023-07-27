@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root{
+    --background-header: rgb(48, 65, 123);
+    --padding-h: 20px 40px;
+    --color-h: white;
+    --color-p: #66c7ff;
+    --color-p-hover: #4f9bff;
+    --background-color2: #0a0d0f;
+    --back-color: #0e1c1d;
+    --pd-page: 40px;
+    --back-footer: #112021;
+}

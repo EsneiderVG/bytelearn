@@ -1,10 +1,12 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> <%@ page
+language="java" contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ByteLearn</title>
+  <title>ByteLearn - Cursos Python</title>
   <link rel="icon" href="/img/terzo.svg">
   <link rel="stylesheet" href="/css/home/main.css">
   <script src="https://kit.fontawesome.com/15c45fe034.js" crossorigin="anonymous"></script>

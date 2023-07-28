@@ -1,17 +1,5 @@
 @import "../vars.css";
 
-:root{
-  --background-header: rgb(48, 65, 123);
-  --padding-h: 20px 40px;
-  --color-h: white;
-  --color-p: #9966ff;
-  --color-p-hover: #8a4fff;
-  --background-color2: #0e0a0f;
-  --back-color: #0e1c1d;
-  --pd-page: 40px;
-  --back-footer: #161121;
-}
-
 * {
   padding: 0px;
   margin: 0px;

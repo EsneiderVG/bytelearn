@@ -6,10 +6,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class CursosController {
 
-    @GetMapping("/cursos/view")
+    @GetMapping("/cursos/curso/view")
     String cursoView(){
         return "pages/cursos/cursoview.jsp";
     }
 
+    @GetMapping("/cursos/curso/certificate")
+    String cursoCertificate(){
+        return "pages/cursos/certificado/certificado.jsp";
+    }
     
 }

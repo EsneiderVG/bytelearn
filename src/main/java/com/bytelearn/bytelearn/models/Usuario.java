@@ -37,7 +37,7 @@ public class Usuario extends ModeloBase{
     @NotNull
     @Size(min = 1, max = 255)
     private String password;
-
+    
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_type")

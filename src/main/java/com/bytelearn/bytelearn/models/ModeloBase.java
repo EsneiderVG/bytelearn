@@ -19,7 +19,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class ModeloBase {
+public abstract class ModeloBase {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

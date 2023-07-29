@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.bytelearn.bytelearn.repositories.RepositorioBase;
 
 @Service
-public class ServicioBase<T> {
+public abstract class ServicioBase<T> {
 
     RepositorioBase<T> repositorioBase;
 

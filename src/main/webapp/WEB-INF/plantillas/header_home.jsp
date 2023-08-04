@@ -2,7 +2,7 @@
 <header>
     <div class="logo row-flex center-x">
       <img src="/img/terzo.svg" alt="xd" width="35" />
-      <a href="#" class="logo">ByteLearn</a>
+      <a href="/" class="logo">ByteLearn</a>
     </div>
 
     <div class="navigation">
@@ -37,8 +37,8 @@
 
         <div class="row-flex btns-log-up">
 
-          <li class="menu-item"><a href="#">Sign Up</a></li>
-          <li class="menu-item btn-a"><a href="#">Login</a></li>
+          <li class="menu-item"><a href="/login/singUp">Sign Up</a></li>
+          <li class="menu-item btn-a"><a href="/login/singIn">Login</a></li>
 
         </div>
 

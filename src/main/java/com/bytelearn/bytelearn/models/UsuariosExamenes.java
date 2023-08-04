@@ -15,7 +15,6 @@ import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -33,7 +32,6 @@ public class UsuariosExamenes{
 
     @Max(5)
     @Min(1)
-    @NotNull
     private Double nota;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -44,12 +42,10 @@ public class UsuariosExamenes{
         this.takeAt = new Date();
     }
 
-    @NotNull
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="examen_id")
     private Examenes examen;
     
-    @NotNull
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="usuario_id")
     private Usuario usuario;

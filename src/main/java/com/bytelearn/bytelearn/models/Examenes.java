@@ -9,7 +9,6 @@ import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -21,12 +20,10 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Examenes extends ModeloBase {
     
-    @NotNull
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "curso_id")
     private Curso curso;
 
-    @NotNull
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
         name = "usuarios_toman_examenes", 

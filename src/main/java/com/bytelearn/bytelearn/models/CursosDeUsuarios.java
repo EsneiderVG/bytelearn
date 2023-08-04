@@ -32,12 +32,10 @@ public class CursosDeUsuarios{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="usuario_id")
     private Usuario usuario;
     
-    @NotNull
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="curso_id")
     private Curso curso;

@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/css/plantillas/header_home.css">
 <header>
     <div class="logo row-flex center-x">
-      <img src="/img/terzo.svg" alt="xd" width="35" />
+      <img src="/img/terzo.svg" alt="Imagen del logo" width="35" />
       <a href="/" class="logo">ByteLearn</a>
     </div>
 

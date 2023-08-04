@@ -34,7 +34,6 @@ public class Curso extends ModeloBase {
     @JoinColumn(name = "created_for")
     private Usuario createdFor;
 
-    @NotNull
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
         name = "cursos_de_los_usuarios", 
@@ -43,11 +42,9 @@ public class Curso extends ModeloBase {
     )
     private List<Usuario> usuarios;
 
-    @NotNull
     @OneToMany(mappedBy = "curso",fetch =  FetchType.LAZY)
     private List<Examenes> examenes;
 
-    @NotNull
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
         name = "comentarios", 

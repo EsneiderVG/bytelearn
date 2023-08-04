@@ -2,7 +2,7 @@
 <header>
     <div class="logo row-flex center-x">
       <img src="/img/terzo.svg" alt="xd" width="35" />
-      <a href="#" class="logo">ByteLearn</a>
+      <a href="/" class="logo">ByteLearn</a>
     </div>
 
     <div class="navegation-pages-cont row-flex center-x">

@@ -1,5 +1,6 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> <%@ page
-language="java" contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,7 +61,46 @@ language="java" contentType="text/html; charset=UTF-8" %>
         </div>
         <div class="signup-form">
           <div class="title">Registrate</div>
-          <form method="POST" enctype="multipart/form-data">
+          <form:form action="/login/singUp/new" method="POST" enctype="multipart/form-data" modelAttribute="usuario">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-user"></i>
+                <form:input  placeholder="digita tus nombres" path="firstName"/>
+              </div>
+              <form:errors path="firstName" />
+              <div class="input-box">
+                <i class="fas fa-user"></i>
+                <form:input  placeholder="digita tus apellidos" path="lastName"/>
+              </div>
+              <form:errors path="lastName" />
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <form:input type="email" placeholder="digita tu gmail" path="email"/>
+              </div>
+              <form:errors path="email" />
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <form:input  placeholder="digita tu usuario" path="username"/>
+              </div>
+              <form:errors path="username" />
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <form:input type="password" placeholder="digita tu contraseña" path="password"/>
+              </div>
+              <form:errors path="password" />
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <form:input type="password" placeholder="confirma tu contraseña" path="confirmPassword"/>
+              </div>
+              <form:errors path="confirmPassword" />
+            </div>  
+    
+            <div class="button input-box">
+              <input type="submit" name="submit_2" value="Sumbit">
+            </div>
+            <div class="text sign-up-text">Ya tienes una cuenta? <label for="flip">Ingresa ahora</label></div>
+          </form:form>
+          <!-- <form method="POST" enctype="multipart/form-data">
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-user"></i>
@@ -68,7 +108,7 @@ language="java" contentType="text/html; charset=UTF-8" %>
               </div>
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input name="email" type="text" placeholder="digita tu gmail" required>
+                <input name="email" type="email" placeholder="digita tu gmail" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
@@ -87,7 +127,7 @@ language="java" contentType="text/html; charset=UTF-8" %>
               </div>
               <div class="text sign-up-text">Ya tienes una cuenta? <label for="flip">Ingresa ahora</label></div>
             </div>
-          </form>
+          </form> -->
         </div>
       </div>
     </div>

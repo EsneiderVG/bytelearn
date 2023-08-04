@@ -30,7 +30,7 @@ language="java" contentType="text/html; charset=UTF-8" %>
             Discover data across your contract ecosystem to drive savings and
             reduce risk through Terzo AI
           </p>
-          <form action="#">
+          <form action="/login/singUp">
             <button>Registrate!</button>
           </form>
         </div>

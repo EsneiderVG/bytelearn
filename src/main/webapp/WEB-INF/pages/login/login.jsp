@@ -7,7 +7,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - ByteLearn</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="/css/login/login.css">
     <script src="https://kit.fontawesome.com/15c45fe034.js" crossorigin="anonymous"></script>
 </head>
@@ -22,7 +21,7 @@
         <!--<img src="images/frontImg.jpg" alt="">-->
         <div class="text">
           <span class="text-1">Cursos didacticos<br>Bootcamps!</span>
-          <span class="text-2">ByteLearn</span>
+          <span class="text-2">ByteLearn <c:out value="${usuario.firstName}" /></span>
         </div>
       </div>
       <div class="back">
@@ -37,7 +36,7 @@
       <div class="form-content">
         <div class="login-form">
           <div class="title">Ingresa</div>
-          <form method="post">
+          <form method="post" action="/login/singIn/enter">
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
@@ -100,35 +99,7 @@
             </div>
             <div class="text sign-up-text">Ya tienes una cuenta? <label for="flip">Ingresa ahora</label></div>
           </form:form>
-          <!-- <form method="POST" enctype="multipart/form-data">
-            <div class="input-boxes">
-              <div class="input-box">
-                <i class="fas fa-user"></i>
-                <input name="nombres_completos" type="text" placeholder="digita tu nombre completo" required>
-              </div>
-              <div class="input-box">
-                <i class="fas fa-envelope"></i>
-                <input name="email" type="email" placeholder="digita tu gmail" required>
-              </div>
-              <div class="input-box">
-                <i class="fas fa-lock"></i>
-                <input name="usuario" type="text" placeholder="digita tu usuario" required>
-              </div>
-              <div class="input-box">
-                <i class="fas fa-lock"></i>
-                <input name="password" type="password" placeholder="digita tu contraseña" required>
-              </div>
-              <div class="input-box">
-                <i class="fas fa-lock"></i>
-                <input name="confirm_password" type="password" placeholder="confirma tu contraseña" required>
-              </div>
-              <div class="button input-box">
-                <input type="submit" name="submit_2" value="Sumbit">
-              </div>
-              <div class="text sign-up-text">Ya tienes una cuenta? <label for="flip">Ingresa ahora</label></div>
-            </div>
-          </form> -->
-        </div>
+          </div>
       </div>
     </div>
   </div>

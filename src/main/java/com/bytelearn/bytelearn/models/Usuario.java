@@ -53,27 +53,22 @@ public class Usuario extends ModeloBase {
     @Transient
     private String confirmPassword;
 
-    @NotNull
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_type")
     private TiposUsarios userType;
 
-    @NotNull
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "cursos_de_los_usuarios", joinColumns = @JoinColumn(name = "usuario_id"), inverseJoinColumns = @JoinColumn(name = "curso_id"))
     private List<Curso> cursos;
 
-    @NotNull
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "usuarios_toman_examenes", joinColumns = @JoinColumn(name = "usuario_id"), inverseJoinColumns = @JoinColumn(name = "examen_id"))
     private List<Examenes> examenes;
 
-    @NotNull
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "comentarios", joinColumns = @JoinColumn(name = "user_thath_send"), inverseJoinColumns = @JoinColumn(name = "comment_place"))
     private List<Curso> comentariosDeLosUsuarios;
 
-    @NotNull
     @OneToMany(mappedBy = "createdFor", fetch = FetchType.LAZY)
     private List<Curso> cursosCreados;
 

@@ -24,7 +24,7 @@ language="java" contentType="text/html; charset=UTF-8" %>
       <div class="row-flex gp-50 justify-center">
         <div class="box-item w-xx">
           <h1 class="title-xxl">
-            Unlock financial insights hidden in your contracts
+            Unlock financial insights hidden in your contracts <c:out value="${dato}"/><c:out value="${datoU.username}"/>
           </h1>
           <p>
             Discover data across your contract ecosystem to drive savings and

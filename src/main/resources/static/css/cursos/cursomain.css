@@ -1,0 +1,247 @@
+/* @import "vars.css"; */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+    transition: all 1s;
+    color: white;
+}
+
+:root {
+    --submenu-hover-bck: #317996;
+    --padding-h: 20px 40px;
+    --color-h: white;
+    /* color principal  */
+    --color-p: #30a6eb;
+    --color-p-t: #30a6eb4d;
+    --color-p-hover: #4f9bff;
+    --background-color2: #112125;
+    --color-p-buttons-filter: #30a6eb91;
+    --back-color: #0e1c1d;
+    --pd-page: 40px;
+    --back-footer: #0c171a;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: poppins;
+  background: var(--back-color);
+  scroll-behavior: smooth;
+}
+
+.main{
+    margin: 0px 60px;
+}
+
+a {
+  color: inherit;
+}
+
+.flex-row-cont{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: center;
+    
+}
+
+.container-boxy-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.border-themes{
+    border: 2px solid var(--color-p);
+}
+
+.contents-cards-slide{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img-intro{
+    width: 400px;
+}
+
+.img-small{
+    width: 30px;
+}
+.buttons-neon{
+    border: 2px solid var(--color-p);
+    cursor: pointer;
+    background: var(--color-p-buttons-filter);
+}
+
+.buttons-neon:hover{
+    transform: scale(0.9);
+    -webkit-box-shadow: -1px 0px 26px 1px rgba(48,166,235,0.73);
+    -moz-box-shadow: -1px 0px 26px 1px rgba(48,166,235,0.73);
+    box-shadow: -1px 0px 26px 1px rgba(48,166,235,0.73);
+}
+
+.circle-bck{
+    background: radial-gradient(ellipse, var(--background-color2) 50%, var(--color-p-hover) 55%, var(--background-color2) 65%);
+}
+
+/* cards  */
+
+.cards-list {
+    width: 100%;
+    gap: 25px;
+    display: flex;
+    overflow-x: hidden;
+    justify-content: flex-start;
+}
+
+.card {
+    background: var(--color-p-buttons-filter);
+    border: 2px solid var(--color-p);
+    margin: 30px auto;
+    width: 280px;
+    height: 280px;
+    border-radius: 40px;
+    box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+    transition: 0.4s;
+    color: white;
+    z-index: 0;
+}
+
+.card .card_image {
+    width: 100%;
+    border-radius: 40px;
+}
+
+.card .card_image img {
+    width: inherit;
+    height: 140px;
+    border-radius: 40px 40px 0px 0px;
+    object-fit: cover;
+}
+
+.card .card_title {
+    border-radius: 0px 0px 40px 40px;
+    font-family: sans-serif;
+    font-weight: 500;
+    height: 40px;
+}
+
+.card:hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+        -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+}
+
+.title-white {
+    color: white;
+}
+
+.title-black {
+    color: black;
+}
+
+.progress-text{
+    margin-top: 40px;
+}
+
+.progress{
+    width: 50%;
+    height: 6px;
+    background: var(--color-p);
+    border-radius: 12px;
+    box-shadow: 2px 2px 30px 1px var(--color-p), -2px -2px 30px 1px var(--color-p);
+}
+
+.mark{
+    color:var(--color-p)
+}
+
+.custom-button{
+    background: var(--color-p-t);
+}
+
+.custom-button:hover{
+    transform: scale(1.1);
+}
+
+.button-edit:hover{
+    transform: scale(1.1);
+}
+
+.icon-action{
+    background: var(--submenu-hover-bck);
+    padding: 4px 8px;
+    border-radius: 12px;
+}
+
+.icon-action:hover{
+    background: var(--color-p);
+}
+
+.title-top{
+    background: var(--color-p);
+    border-radius: 12px 12px 0px 0px;
+}
+
+.box-top{
+    border: 2px solid var(--color-p);
+}
+
+.border-up{
+    border-radius: 12px 0px 0px 12px;
+}
+
+.height-adp{
+    height: 360px;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .cards-list{
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media screen and (max-width: 920px) {
+    .flex-row-cont{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .cards-list{
+        grid-template-columns: 1fr;
+    }
+
+    .height-adp{
+        height: 660px;
+    }
+
+    .container-boxy-card{
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .card{
+        width: 100%;
+        height: 390px;
+    }
+
+    .progress-text{
+        margin-top: 40px;
+    }
+
+}

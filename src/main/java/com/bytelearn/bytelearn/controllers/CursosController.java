@@ -17,5 +17,10 @@ public class CursosController {
     String cursoCertificate(){
         return "pages/cursos/certificado/certificado.jsp";
     }
+
+    @GetMapping("")
+    String cursosMain(){
+        return "pages/cursos/cursomain.jsp";
+    }
     
 }

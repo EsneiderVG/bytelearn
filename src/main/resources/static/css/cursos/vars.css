@@ -18,52 +18,6 @@
     --back-footer: #0c171a;
 }
 
-.text-white{
-    color: white;
-}
-
-.title-xxl{
-    font-size: 40px;
-    font-weight: 400;
-}
-
-.fnt-18{
-    font-size: 18px;
-}
-
-.w-xx{
-    max-width: 500px;
-}
-
-.w-100{
-    width: 100%;
-}
-
-.w-95-a{
-    margin: 0px auto;
-    width: 95%;
-}
-
-.mg-bt-20{
-    margin-bottom: 20px;
-}
-
-.mg-bt-60{
-    margin-bottom: 60px;
-}
-
-.mg-tp-60{
-    margin-top: 60px;
-}
-
-.pd-10{
-    padding: 10px;
-}
-
-.pd-20{
-    padding: 20px;
-}
-
 .justify-space{
     justify-content: space-between;
 }
@@ -95,35 +49,4 @@
     gap: 20px;
 }
 
-.ul-list-delete{
-    list-style: none;
-}
 
-button{
-    background: var(--color-p);
-    padding: 12px 25px;
-    border: none;
-    border-radius: 12px;
-    font-size: 1em;
-    cursor: pointer;
-}
-
-.btn-a{
-    background: var(--color-p);
-    padding: 5px;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    align-self: center;
-    align-content: center;
-}
-
-
-
-.btn-a:hover, button:hover{
-    background: var(--color-p-hover);
-}
-
-button:hover{
-    padding: 12px 35px;
-}

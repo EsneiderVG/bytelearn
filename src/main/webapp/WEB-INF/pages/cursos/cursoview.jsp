@@ -8,7 +8,7 @@ language="java" contentType="text/html; charset=UTF-8" %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ByteLearn - Cursos Python</title>
   <link rel="icon" href="/img/terzo.svg">
-  <link rel="stylesheet" href="/css/cursos/main.css">
+  <link rel="stylesheet" href="/css/cursos/cursoview.css">
   <script src="https://kit.fontawesome.com/15c45fe034.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     integrity="sha384-Z99tn9+g1M1kbw0q33mZXd7LIhyXf3gyfG1vzO+FoC9PPjgx/9OTe7DfvWiEmV8g" crossorigin="anonymous">
@@ -21,8 +21,6 @@ language="java" contentType="text/html; charset=UTF-8" %>
 
     initTE({ Collapse });
   </script>
-
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
 </head>
 

@@ -27,6 +27,7 @@
         <li class="menu-item"><a href="#">Contact</a></li>
         <div class="account-section">
           <i class="fa-solid fa-user"></i>
+          <a class="b" href="/logout">Logout</a>
         </div>
       </ul>
 

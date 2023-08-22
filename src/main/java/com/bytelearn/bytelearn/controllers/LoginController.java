@@ -45,7 +45,7 @@ public class LoginController {
         } else {
             session.setAttribute("sesion", usuario.getId());
         }
-        return "redirect:/";
+        return "redirect:/cursos";
     }
 
     @GetMapping("/singUp")
@@ -62,7 +62,14 @@ public class LoginController {
         } else {
             usuarioService.save(usuarioSingup);
             session.setAttribute("sesion", usuarioSingup.getId());
-            return "redirect:/";
+            return "redirect:/cursos";
         }
     }
+
+   
+
+
+
+
+
 }

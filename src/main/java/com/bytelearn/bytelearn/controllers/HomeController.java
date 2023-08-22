@@ -27,4 +27,11 @@ public class HomeController {
         }
         return "index.jsp";
     }
+
+    @GetMapping("/logout")
+    public String cierre(HttpSession session){
+        session.removeAttribute("usuarioSingup"); 
+        return "redirect:/";
+
+    }
 }

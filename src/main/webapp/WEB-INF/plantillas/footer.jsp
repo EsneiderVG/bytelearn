@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/css/plantillas/footer.css">
 <footer>
-    <div class="row-flex gp-50 justify-center">
+    <div class="cont-footer row-flex gp-50 justify-center">
       <div class="item-fot">
         <div class="logo row-flex center-x">
           <img src="/img/terzo.svg" alt="xd" width="35" />
@@ -44,7 +44,7 @@
       </div>
 
     </div>
-    <div class="foot-down row-flex justify-space gp-50">
+    <div class="cont-footer foot-down row-flex justify-space gp-50">
       <p>copywrite @2023 Esneider VG</p>
       <p>social@terzocloud.com</p>
       <p>Privacy Policy</p>

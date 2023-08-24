@@ -158,11 +158,11 @@ header.sticky .menu-item .sub-menu {
 .navegation-pages-cont{
     border: solid 2px white;
     border-radius: 20px;
-    padding: 5px 15px;
+    padding: 2px 15px;
 }
 
 .searcher-head{
-    padding: 10px 25px;
+    padding: 10px 10px;
     border-radius: 8px;
     outline: none;
     background: none;
@@ -182,7 +182,7 @@ header.sticky .menu-item .sub-menu {
 }
 
 .account-section i{
-    font-size: 32px;
+    font-size: 25px;
     color: rgb(0, 0, 0);
     padding: 8px 10px;
     border: solid 2px white;
@@ -300,7 +300,7 @@ header.sticky .menu-item .sub-menu {
     }
 
     .close-btn {
-        background: url(../img/close.png) no-repeat;
+        background: url(/../img/close.png) no-repeat;
         width: 40px;
         height: 40px;
         background-position: center;
@@ -311,7 +311,7 @@ header.sticky .menu-item .sub-menu {
     }
 
     .menu-btn {
-        background: url(../img/menu.png) no-repeat;
+        background: url(/../img/menu.png) no-repeat;
         width: 40px;
         height: 40px;
         background-size: 30px;

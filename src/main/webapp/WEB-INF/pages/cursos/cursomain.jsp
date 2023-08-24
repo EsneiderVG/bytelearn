@@ -11,7 +11,7 @@ language="java" contentType="text/html; charset=UTF-8" %>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/15c45fe034.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/cursos/cursomain.css">
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
 </head>
 <body>
 
@@ -223,21 +223,51 @@ language="java" contentType="text/html; charset=UTF-8" %>
                 <p class="text-xl font-medium">Identify the skills you need to advance your career</p>
                 <span>Good lucky</span>
             </div>
-            <div class="flex-row-cont gap-6 p-4">
+            <div class="flex-row-cont-selected gap-6 p-4">
                 <div class="box-top flex items-center justify-around px-4 py-4 rounded-xl">
-                    <span class="mark mr-2">1</span> Cursos de python
+                    <span class="mark mr-2">1</span> Cursos de JavaScript
                     <a href="#">Explorar 
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
                 <div class="box-top flex items-center justify-around px-4 py-4 rounded-xl">
-                    <span class="mark mr-2">2</span> Cursos de python
+                    <span class="mark mr-2">1</span> Cursos de Python
                     <a href="#">Explorar 
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
                 <div class="box-top flex items-center justify-around px-4 py-4 rounded-xl">
-                    <span class="mark mr-2">3</span> Cursos de python
+                    <span class="mark mr-2">1</span> Cursos de Java
+                    <a href="#">Explorar 
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="box-top flex items-center justify-around px-4 py-4 rounded-xl">
+                    <span class="mark mr-2">1</span> Cursos de React
+                    <a href="#">Explorar 
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="box-top flex items-center justify-around px-4 py-4 rounded-xl">
+                    <span class="mark mr-2">1</span> Cursos de Angular
+                    <a href="#">Explorar 
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="box-top flex items-center justify-around px-4 py-4 rounded-xl">
+                    <span class="mark mr-2">1</span> Cursos de Flutter
+                    <a href="#">Explorar 
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="box-top flex items-center justify-around px-4 py-4 rounded-xl">
+                    <span class="mark mr-2">2</span> Cursos de Kotlin
+                    <a href="#">Explorar 
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="box-top flex items-center justify-around px-4 py-4 rounded-xl">
+                    <span class="mark mr-2">3</span> Cursos de C++
                     <a href="#">Explorar 
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -429,12 +459,53 @@ language="java" contentType="text/html; charset=UTF-8" %>
                     </span>
                 </button>
             </div>
+
         </div>  
+
+        <div class="roadmaps-container flex justify-between">
+            <div class="card-road">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="">
+            </div>
+            <div class="card-road">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="">
+            </div>
+            <div class="card-road">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="">
+            </div>
+            <div class="card-road">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="">
+            </div>
+            
+        </div>
+        <script>
+            const containers = document.querySelectorAll('.card-road');
+
+            function myGreeting(containerXt){
+                
+            }
+
+            containers.forEach(container => {
+            container.addEventListener('mouseenter', () => {
+                containers.forEach(c => c.classList.remove('active'));
+                container.classList.add('active');
+            });
+            container.addEventListener('mouseleave', () => {
+                container.classList.remove('active');
+            });
+            });
+
+            
+
+            function myStopFunction() {
+            clearTimeout(myTimeout);
+            }
+        </script>
     </div>       
 
     <%@ include file="../../plantillas/footer.jsp" %>
 
     <!-- <script src="cursosMain.js"></script> -->
+    <script src="js/header.js"></script>
     <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
 </body>
 

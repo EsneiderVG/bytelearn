@@ -260,7 +260,7 @@ header.sticky .menu-item .sub-menu {
   }
 
   .close-btn{
-    background: url(../img/close.png) no-repeat;
+    background: url(/../img/close.png) no-repeat;
     width: 40px;
     height: 40px;
     background-position: center;
@@ -271,7 +271,7 @@ header.sticky .menu-item .sub-menu {
   }
 
   .menu-btn{
-    background: url(../img/menu.png) no-repeat;
+    background: url(/../img/menu.png) no-repeat;
     width: 40px;
     height: 40px;
     background-size: 30px;

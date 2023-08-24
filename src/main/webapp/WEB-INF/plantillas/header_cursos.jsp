@@ -26,7 +26,8 @@
         </li>
         <li class="menu-item"><a href="#">Contact</a></li>
         <div class="account-section">
-          <i class="fa-solid fa-user"></i>
+          <i class="fa-solid fa-user" title="perfil de usuario"></i>
+          <a class="b" href="/logout">Logout</a>
         </div>
       </ul>
 

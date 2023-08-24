@@ -39,3 +39,21 @@ footer{
 .imgs-foot img{
     width: 90px;
 }
+
+@media (max-width: 650px) {
+
+    footer{
+        padding: 0px 20px;
+    }
+
+    .cont-footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 350px) {
+    .cont-footer{
+        grid-template-columns: 1fr;
+    }
+}

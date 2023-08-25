@@ -560,6 +560,13 @@ input{
 }
 
 @media (max-width: 730px) {
+
+    .container{
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+    }
+
     .container .cover {
         display: none;
     }

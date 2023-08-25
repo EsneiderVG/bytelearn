@@ -196,6 +196,11 @@ header.sticky .menu-item .sub-menu {
     color: var(--color-p);
 }
 
+.slider-account{
+    width: 360px;
+    background: var(--background-color2);
+}
+
 @media (max-width: 1024px) {
 
     header {

@@ -38,7 +38,7 @@
         <div class="row-flex btns-log-up">
 
           <li class="menu-item"><a href="/login/singUp">Sign Up</a></li>
-          <li class="menu-item btn-a"><a href="/login/singIn">Login</a></li>
+          <li class="menu-item btn-a"><a href="/login">Login</a></li>
 
         </div>
 

@@ -34,18 +34,17 @@
       <div class="form-content">
         <div class="login-form">
           <div class="title">Ingresa</div>
-          <form method="post" action="/login/singIn">
+          <form method="post" action="/login">
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="email" placeholder="digita tu gmail" name="email">
+                <input type="email" placeholder="digita tu gmail" name="username">
               </div>
-              <c:out value="${correoErroneo}"/>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
                 <input type="password" placeholder="digita tu contraseña" name="password">
               </div>
-              <c:out value="${contraseñaNula}"/>
               <div class="text"><a href="#">Olvidaste tu contraseña?</a></div>
               <!-- <div class="button input-box"> -->
               <button class="button_form">Ingresar</button>
@@ -60,7 +59,7 @@
         </div>
         <div class="signup-form">
           <div class="title">Registrate</div>
-          <form:form action="/login/singUp" method="post" modelAttribute="registroUsuario">
+          <form:form action="/user/new" method="post" modelAttribute="registroUsuario">
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-user"></i>

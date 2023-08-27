@@ -47,13 +47,13 @@ public class Usuario extends ModeloBase {
 
     @NotNull
     @NotBlank
-    @Size(min = 8, max = 255)
+    @Size(min = 8)
     private String password;
 
     @Transient
     private String confirmPassword;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_type")
     private TiposUsarios userType;
 

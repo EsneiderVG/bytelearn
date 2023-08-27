@@ -4,4 +4,6 @@ import com.bytelearn.bytelearn.models.TiposUsarios;
 
 public interface TipoUsuarioRepositorie extends RepositorioBase<TiposUsarios>{
     
+    TiposUsarios findByNameContaining(String name);
+
 }

@@ -7,16 +7,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("/cursos")
+@RequestMapping("/curso")
 public class CursosController {
 
-    @GetMapping("/curso/view")
+    @GetMapping("/view")
     String cursoView(@RequestParam(value = "type", defaultValue = "0") int typeSection, Model model){
         model.addAttribute("typeSection", typeSection);
         return "pages/cursos/cursoview.jsp";
     }
 
-    @GetMapping("/curso/certificate")
+    @GetMapping("/certificate")
     String cursoCertificate(){
         return "pages/cursos/certificado/certificado.jsp";
     }

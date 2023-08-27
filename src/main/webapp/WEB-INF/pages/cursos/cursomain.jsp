@@ -60,21 +60,23 @@ language="java" contentType="text/html; charset=UTF-8" %>
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                             <div class="contents-cards-slide">
                                 
-                                <div class="card 1">
-                                    <div class="card_image">
-                                        <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                                    </div>
-    
-                                    <div class="info-course px-1">
-    
-                                        <div class="card_title title-white px-4 pt-4">
-                                            <p>Curso de python</p>
-                                            <p class="text-base">Curso de python 100% gratis</p>
-                                            <p class="mt-4">By: Neider Caceres</p>
+                                <a href="cursos/curso/view">
+                                    <div class="card 1">
+                                        <div class="card_image">
+                                            <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
                                         </div>
-    
+        
+                                        <div class="info-course px-1">
+        
+                                            <div class="card_title title-white px-4 pt-4">
+                                                <p>Curso de python</p>
+                                                <p class="text-base">Curso de python 100% gratis</p>
+                                                <p class="mt-4">By: Neider Caceres</p>
+                                            </div>
+        
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                                 <div class="card 1">
                                     <div class="card_image">
                                         <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
@@ -556,25 +558,16 @@ language="java" contentType="text/html; charset=UTF-8" %>
         <script>
             const containers = document.querySelectorAll('.card-road');
 
-            function myGreeting(containerXt){
-                
-            }
-
             containers.forEach(container => {
             container.addEventListener('mouseenter', () => {
                 containers.forEach(c => c.classList.remove('active'));
                 container.classList.add('active');
             });
+
             container.addEventListener('mouseleave', () => {
                 container.classList.remove('active');
             });
             });
-
-            
-
-            function myStopFunction() {
-            clearTimeout(myTimeout);
-            }
         </script>
     </div>       
 

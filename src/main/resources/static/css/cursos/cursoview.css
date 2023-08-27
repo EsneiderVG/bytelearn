@@ -69,6 +69,32 @@ body{
     display: inline-block;
 }
 
+
+.tab-curse span{
+    cursor: pointer;
+}
+
+.tab-curse span[aria-selected="false"]{
+    color: white;
+}
+
+.tab-curse span[aria-selected="false"]:hover{
+    color: #009dff;
+}
+
+.tab-curse span[aria-selected="true"]{
+    color: #009dff;
+}
+
+.accordion-content{
+    max-height: 100%;
+}
+
+.list-acord{
+    cursor: pointer;
+    margin-left: 10px;
+}
+
 @media (min-width: 1040px)  {
     
     .video-vs{

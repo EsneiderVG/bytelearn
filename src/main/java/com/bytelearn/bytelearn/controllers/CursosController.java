@@ -1,15 +1,18 @@
 package com.bytelearn.bytelearn.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/cursos")
 public class CursosController {
 
     @GetMapping("/curso/view")
-    String cursoView(){
+    String cursoView(@RequestParam(value = "type", defaultValue = "0") int typeSection, Model model){
+        model.addAttribute("typeSection", typeSection);
         return "pages/cursos/cursoview.jsp";
     }
 

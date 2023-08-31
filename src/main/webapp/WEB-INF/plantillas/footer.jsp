@@ -3,8 +3,8 @@
     <div class="cont-footer row-flex gp-50 justify-center">
       <div class="item-fot">
         <div class="logo row-flex center-x">
-          <img src="/img/terzo.svg" alt="xd" width="35" />
-          <a href="#" class="logo">ByteLearn</a>
+          <img src="/img/gdo-img.png" alt="xd" width="35" />
+          <a href="#" class="logo">GDO</a>
         </div>
         <div class="imgs-foot flex">
           <img src="/img/iso.png" alt="iso">

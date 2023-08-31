@@ -50,40 +50,8 @@ language="java" contentType="text/html; charset=UTF-8" %>
 
 
   <script src="header.js"></script>
-  <script>
-    const accordionHeader = document.querySelectorAll(".accordion-header");
-    accordionHeader.forEach((header) => {
-      header.addEventListener("click", function () {
-        const accordionContent = header.parentElement.querySelector(".accordion-content");
-        let accordionMaxHeight = accordionContent.style.maxHeight;
-
-        // Condition handling
-        if (accordionMaxHeight == "0px" || accordionMaxHeight.length == 0) {
-          accordionContent.style.maxHeight = `${accordionContent.scrollHeight + 100}%`;
-          header.querySelector(".fas").classList.remove("fa-plus");
-          header.querySelector(".fas").classList.add("fa-minus");
-          header.parentElement.classList.add("bg-[#00304d]");
-        } else {
-          accordionContent.style.maxHeight = `0px`;
-          header.querySelector(".fas").classList.add("fa-plus");
-          header.querySelector(".fas").classList.remove("fa-minus");
-          header.parentElement.classList.remove("bg-[#00304d]");
-        }
-      });
-    });
-  </script>
+  <script src="/js/cursoview.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
 
 </body>
-
 </html>
-
-
-<!-- <div>
-  <p>Cursos Relacionados</p>
-  <img
-    src="https://www.mundodeportivo.com/alfabeta/hero/2020/12/all-might-4.jpg?width=768&aspect_ratio=16:9&format=nowebp"
-    width="60" height="60" alt="">
-  <p>Programacion orientada a pyhon</p>
-  <p><strong>BYTELEARN</strong></p>
-</div> -->

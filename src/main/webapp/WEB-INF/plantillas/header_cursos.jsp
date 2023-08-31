@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="/css/plantillas/header_cursos.css">
 <header>
     <div class="logo row-flex center-x">
-      <img src="/img/terzo.svg" alt="xd" width="35" />
-      <a href="/" class="logo">ByteLearn</a>
+      <img src="/img/gdo-img.png" alt="xd" width="35" />
+      <a href="/" class="logo">GDO</a>
     </div>
 
     <div class="navegation-pages-cont row-flex center-x">
@@ -42,7 +42,7 @@
   </header>
 
   <!-- Slider de usuario -->
-  <div id="slideover-container" class=" z-50	w-full h-full fixed inset-0 invisible">
+  <div id="slideover-container" class="text-white z-50 w-full h-full fixed inset-0 invisible">
       <div onclick="toggleSlideover()" id="slideover-bg" class="w-full h-full duration-500 ease-out transition-all inset-0 absolute opacity-0">
         
       </div>

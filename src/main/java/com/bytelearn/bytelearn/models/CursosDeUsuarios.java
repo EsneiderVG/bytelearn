@@ -38,7 +38,7 @@ public class CursosDeUsuarios{
     
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="curso_id")
-    private Curso curso;
+    private RoadMap curso;
 
     @NotNull
     @Max(200)

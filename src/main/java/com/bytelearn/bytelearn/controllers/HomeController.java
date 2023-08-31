@@ -16,16 +16,17 @@ import jakarta.servlet.http.HttpSession;
 @Controller
 public class HomeController {
 
-    @Autowired UsuarioService usuarioService;
+    @Autowired
+    UsuarioService usuarioService;
 
     @GetMapping("/")
-    String home(Principal principal, Model model, HttpSession session){
-        // Usuario usuario = usuarioService.findByemail(principal.getName());
-        // if(usuario != null){
-        //     model.addAttribute("usuario", usuario);
-        // }else{
-        //     return "redirect:/login";
-        // }
+    String home(Principal principal, Model model, HttpSession session) {
+        if (principal == null) {
+            model.addAttribute("usuario", null);
+        }else{
+            Usuario usuario = usuarioService.findByemail(principal.getName());
+            model.addAttribute("usuario", usuario);
+        }
         return "index.jsp";
     }
 }

@@ -35,9 +35,6 @@ public class usuarioValidator implements Validator {
     }
 
     private void validarContraseña(Usuario usuario, Errors errors) {
-        if(usuario.getPassword().isEmpty()){
-            errors.rejectValue("confirmPassword", "passwordNula");
-        }
         if (!usuario.getPassword().equals(usuario.getConfirmPassword())) {
             errors.rejectValue("confirmPassword", "passwordDiferente");
         }

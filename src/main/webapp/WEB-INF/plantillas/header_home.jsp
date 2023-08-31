@@ -34,12 +34,16 @@
           </ul>
         </li>
         <li class="menu-item"><a href="#">Services</a></li>
-
         <div class="row-flex btns-log-up">
-
-          <li class="menu-item"><a href="/user/new">Sign Up</a></li>
-          <li class="menu-item btn-a"><a href="/login">Login</a></li>
-          <li class="menu-item btn-a"><a href="/logout">Logout</a></li>
+          <c:choose>
+            <c:when test="${usuario != null}">
+              <li class="menu-item btn-a"><a href="/logout">LogOut</a></li>
+            </c:when>
+            <c:otherwise>
+              <li class="menu-item"><a href="/user/new">Sign Up</a></li>
+              <li class="menu-item btn-a"><a href="/login">Login</a></li>
+            </c:otherwise>
+        </c:choose>
 
         </div>
 

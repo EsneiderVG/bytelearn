@@ -1,33 +1,28 @@
 package com.bytelearn.bytelearn.models;
 
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "comentarios")
+@Table(name = "options_question")
 @Getter
 @Setter
 @NoArgsConstructor
-public class Comentarios extends ModeloBase {
+public class OptionQuestion extends ModeloBase {
 
-    private String textContent;
-
-    private String img_content;
-
-    private String archive_content;
+    @Size(min = 1, max = 200)
+    private String opcion;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "comment_place")
-    private RoadMap commentPlace;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_thath_send")
-    private Usuario userThathSend;
-
+    @JoinColumn(name = "question_id")
+    private Question question;
+    
 }

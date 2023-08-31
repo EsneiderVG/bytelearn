@@ -1,6 +1,7 @@
 package com.bytelearn.bytelearn.models;
 
 import java.util.List;
+import java.util.Set;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -17,11 +18,11 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "cursos")
+@Table(name = "road_maps")
 @Getter
 @Setter
 @NoArgsConstructor
-public class Curso extends ModeloBase {
+public class RoadMap extends ModeloBase {
 
     @NotNull
     @Size(min = 1, max = 200)
@@ -42,8 +43,8 @@ public class Curso extends ModeloBase {
     )
     private List<Usuario> usuarios;
 
-    @OneToMany(mappedBy = "curso",fetch =  FetchType.LAZY)
-    private List<Examenes> examenes;
+    @OneToMany(mappedBy = "roadMap",fetch =  FetchType.LAZY)
+    private Set<RutesOrder> rutesOrders;
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(

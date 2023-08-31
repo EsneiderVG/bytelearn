@@ -7,7 +7,7 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,11 +18,10 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Examenes extends ModeloBase {
+public class Examen extends ModeloBase {
     
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "curso_id")
-    private Curso curso;
+    @OneToMany(mappedBy = "examen", fetch = FetchType.LAZY)
+    private List<RutesContent> rutesContents;
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
@@ -31,5 +30,8 @@ public class Examenes extends ModeloBase {
         inverseJoinColumns = @JoinColumn(name = "usuario_id")
     )
     private List<Usuario> usuarios;
+
+    @OneToMany(mappedBy = "examen", fetch = FetchType.LAZY)
+    private List<Question> questions;
 
 }

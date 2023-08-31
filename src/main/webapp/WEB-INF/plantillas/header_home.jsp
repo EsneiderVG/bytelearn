@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="/css/plantillas/header_home.css">
 <header>
     <div class="logo row-flex center-x">
-      <img src="/img/terzo.svg" alt="Imagen del logo" width="35" />
-      <a href="/" class="logo">ByteLearn</a>
+      <img src="/img/gdo-img.png" alt="Imagen del logo" width="35" />
+      <a href="/" class="logo">GDO</a>
     </div>
 
     <div class="navigation">

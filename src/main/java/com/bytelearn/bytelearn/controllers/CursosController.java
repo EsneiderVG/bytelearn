@@ -25,5 +25,10 @@ public class CursosController {
     String cursosMain(){
         return "pages/cursos/cursomain.jsp";
     }
+
+    @GetMapping("/roadmap")
+    String roadMapsPage(){
+        return "pages/cursos/roadmap.jsp";
+    }
     
 }

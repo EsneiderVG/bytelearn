@@ -19,7 +19,7 @@ language="java" contentType="text/html; charset=UTF-8" %>
 
 <%@ include file="../../plantillas/header_cursos.jsp" %>    
 
-    <div class="main mt-12">
+    <div class="container mx-auto mt-10 adp-main">
         <div class="flex-row-cont">
             <div class="container-boxy-card">
                 <p class="text-2xl font-medium">Esneider, grow your skills and advance your carrer width bytelearn</p>
@@ -45,7 +45,7 @@ language="java" contentType="text/html; charset=UTF-8" %>
                 Cursos Bytelearn
             </h1>
     
-            <div class="flex items-center gap-2 mt-4">
+            <div class="flex items-center gap-2 mt-4 flex-wrap">
                 <span class="buttons-neon px-4 py-2 rounded">Github</span>
                 <span class="buttons-neon px-4 py-2 rounded">JavaScript</span>
                 <span class="buttons-neon px-4 py-2 rounded">Git</span>
@@ -371,7 +371,7 @@ language="java" contentType="text/html; charset=UTF-8" %>
 
             <h1 class="text-2xl">Cursos Bytelearn</h1>
 
-            <div class="flex items-center gap-2 mt-4">
+            <div class="flex items-center gap-2 mt-4 flex-wrap">
                 <span class="buttons-neon px-4 py-2 rounded">Github</span>
                 <span class="buttons-neon px-4 py-2 rounded">JavaScript</span>
                 <span class="buttons-neon px-4 py-2 rounded">Git</span>

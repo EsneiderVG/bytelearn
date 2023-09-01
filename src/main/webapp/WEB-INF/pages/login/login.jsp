@@ -19,7 +19,7 @@
         <!--<img src="images/frontImg.jpg" alt="">-->
         <div class="text">
           <span class="text-1">Cursos didacticos<br>Bootcamps!</span>
-          <span class="text-2">ByteLearn</span>
+          <span class="text-2">Guide for Dev Ops</span>
         </div>
       </div>
       <div class="back">
@@ -39,15 +39,15 @@
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="email" placeholder="digita tu gmail" name="username">
+                <input type="email" placeholder="digita tu gmail" name="username" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="digita tu contraseña" name="password">
+                <input type="password" placeholder="digita tu contraseña" name="password" required>
               </div>
               <div class="text"><a href="#">Olvidaste tu contraseña?</a></div>
               <!-- <div class="button input-box"> -->
-              <button class="button_form">Ingresar</button>
+              <button class="button_blue">Ingresar</button>
               <!-- </div> -->
               <div class="text sign-up-text">No tienes cuenta? <label class="change" for="flip">Registrate</label></div>
             </div>
@@ -63,46 +63,53 @@
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-user"></i>
-                <form:input  placeholder="digita tus nombres" path="firstName"/>
+                <form:input  placeholder="digita tus nombres" path="firstName" required="true"/>
               </div>
               <form:errors path="firstName" />
               <div class="input-box">
                 <i class="fas fa-user"></i>
-                <form:input  placeholder="digita tus apellidos" path="lastName"/>
+                <form:input  placeholder="digita tus apellidos" path="lastName" required="" />
               </div>
               <form:errors path="lastName" />
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <form:input type="email" placeholder="digita tu gmail" path="email"/>
+                <form:input type="email" placeholder="digita tu gmail" path="email" required="true"/>
               </div>
               <form:errors path="email" />
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <form:input  placeholder="digita tu usuario" path="username"/>
+                <form:input placeholder="digita tu usuario" path="username" required="true"/>
               </div>
               <form:errors path="username" />
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <form:input type="password" placeholder="digita tu contraseña" path="password"/>
+                <form:input type="password" placeholder="digita tu contraseña" path="password" required="true"/>
               </div>
               <form:errors path="password" />
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <form:input type="password" placeholder="confirma tu contraseña" path="confirmPassword"/>
+                <form:input type="password" placeholder="confirma tu contraseña" path="confirmPassword" required="true"/>
               </div>
               <form:errors path="confirmPassword" />
             </div>  
     
-            <div class="button input-box">
-              <input type="submit" value="Registrar">
-            </div>
+            
+            <input class="button_blue" type="submit" value="Registrar">
+           
             <div class="text sign-up-text">Ya tienes una cuenta? <label for="flip">Ingresa ahora</label></div>
           </form:form>
           </div>
       </div>
     </div>
   </div>
+  <c:import url="popups/popupsoporte.jsp">
+      <c:param name="selected" value="Welcome to Page 1"/>
+      <c:param name="x" value="python"/>
+  </c:import> 
+
   <%@ include file="../../plantillas/footer.jsp" %>
-  <script src="js/popup.js"></script>
+  <script src="/js/popup.js"></script>
+  <script src="/js/login.js"></script>
+
 </body>
 </html>

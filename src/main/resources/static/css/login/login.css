@@ -6,6 +6,9 @@
     --first-color: #30a6eb;
     --second-color: #112125;
     --first-color-op: #197dff;
+    --gradient-color-p: linear-gradient(220deg, rgba(48,166,235,1) 0%, rgba(48,166,235,1) 36%, rgba(157,28,255,1) 100%);
+    --gradient-color-p-hover: linear-gradient(220deg, rgb(44, 141, 197) 0%, rgba(48,166,235,1) 36%, rgb(126, 24, 204) 100%);
+
 }
 
 body{
@@ -14,7 +17,7 @@ body{
 
 .container {
     position: relative;
-    max-width: 850px;
+    max-width: 950px;
     background: #fff;
     padding: 40px 30px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -45,13 +48,13 @@ body{
     color: var(--first-color);
 }
 
-.container #flip:checked~.cover {
+/* .container #flip:checked~.cover {
     transform: rotateY(-180deg);
 }
 
 .container #flip:checked~.cover span {
     transform: rotateY(180deg);
-}
+} */
 
 .container .cover .front,
 .container .cover .back {
@@ -73,7 +76,7 @@ body{
     position: absolute;
     height: 100%;
     width: 100%;
-    background: var(--first-color);
+    background: var(--gradient-color-p);
     opacity: 1;
     z-index: 12;
 }
@@ -214,18 +217,9 @@ body{
     background: var(--first-color); 
 }
 
-.forms .form-content .button input {
-    color: #fff;
-    background: var(--first-color);
-    border-radius: 6px;
-    padding: 0;
-    cursor: pointer;
-    transition: all 0.4s ease;
-}
-
 /* button form */
 
-.button_form{
+.button_blue{
     width: 100%;
     color: white;
     padding: 10px;
@@ -238,12 +232,10 @@ body{
     font-weight: 500;
     font-size: 16px;
     margin: 10px 0px;
+    cursor: pointer;
 }
 
-.button_form:hover{
-    transition: all 0.6s;
-    cursor: pointer;
-    
+.button_blue:hover{
     background: var(--first-color-op);
 }
 
@@ -499,7 +491,7 @@ input{
     width: 100%;
     color: white;
     padding: 10px;
-    background: #0044ff;
+    background: var(--gradient-color-p);
     border: none;
     outline: none;
     text-align: center;
@@ -511,12 +503,9 @@ input{
 }
 
 .button_form2:hover{
-    transition: all 0.6s;
     cursor: pointer;
-    
-    background: #284eb8;
+    background: var(--gradient-color-p-hover);
 }
-
 
 @media (max-width: 730px) {
 

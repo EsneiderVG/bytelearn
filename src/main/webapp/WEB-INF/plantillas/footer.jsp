@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="/css/plantillas/footer.css">
-<footer>
+<footer class="mx-12">
     <div class="cont-footer row-flex gp-50 justify-center">
       <div class="item-fot">
         <div class="logo row-flex center-x">

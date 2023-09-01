@@ -14,7 +14,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Comentarios extends ModeloBase {
+public class Comentario extends ModeloBase {
 
     private String textContent;
 

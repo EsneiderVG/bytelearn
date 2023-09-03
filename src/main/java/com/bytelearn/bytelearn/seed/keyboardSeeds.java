@@ -29,7 +29,27 @@ public class keyboardSeeds implements ApplicationRunner {
         List<Keyboard> keyboards = new ArrayList<>();
         Keyboard keyboard = new Keyboard();
         keyboard.setName("variables");
-        keyboard.setDescription("es un contenedor de datos que almacena los valores durante la ejecución del programa");
+        keyboard.setDescription("contenedor de datos que almacena los valores durante la ejecución del programa");
+        keyboards.add(keyboard);
+
+        keyboard = new Keyboard();
+        keyboard.setName("funciones");
+        keyboard.setDescription("bloque de código que realiza alguna operación");
+        keyboards.add(keyboard);
+
+        keyboard = new Keyboard();
+        keyboard.setName("condicion");
+        keyboard.setDescription("estructura que permite elegir entre la ejecución de una acción u otra.");
+        keyboards.add(keyboard);
+
+        keyboard = new Keyboard();
+        keyboard.setName("bucles");
+        keyboard.setDescription("secuencias de instrucciones de código que se ejecuta repetidas veces.");
+        keyboards.add(keyboard);
+
+        keyboard = new Keyboard();
+        keyboard.setName("sintaxis");
+        keyboard.setDescription("conjunto de reglas que definen la manera de escribir instrucciones de código..");
         keyboards.add(keyboard);
 
         keyboardService.saveAll(keyboards);

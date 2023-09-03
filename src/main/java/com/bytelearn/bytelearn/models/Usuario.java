@@ -53,6 +53,9 @@ public class Usuario extends ModeloBase {
     @Transient
     private String confirmPassword;
 
+    @Size(min = 1)
+    private String imagenPerfil;
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_type")
     private TiposUsarios userType;

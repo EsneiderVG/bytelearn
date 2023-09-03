@@ -1,13 +1,13 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> <%@ page
-language="java" contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ByteLearn - Cursos Python</title>
-  <link rel="icon" href="/img/terzo.svg">
+  <title>GDO - Guide for DevOps</title>
+  <link rel="icon" href="/img/gdo-img.png">
   <link rel="stylesheet" href="/css/home/main.css">
   <script src="https://kit.fontawesome.com/15c45fe034.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
@@ -24,15 +24,23 @@ language="java" contentType="text/html; charset=UTF-8" %>
       <div class="row-flex gp-50 justify-center">
         <div class="box-item w-xx">
           <h1 class="title-xxl">
-            Unlock financial insights hidden in your contracts <c:out value="${usuario.username}"/>
+            Construye Tu Mañana Hoy y Aprende sin Límites.
           </h1>
           <p>
-            Discover data across your contract ecosystem to drive savings and
-            reduce risk through Terzo AI
-          </p>
-          <form action="/login/singUp">
-            <button>Registrate!</button>
-          </form>
+            Descubre todos los cursos y rutas de aprendizaje que tenemos para ti solo con un click
+          </p> 
+          <c:choose>
+            <c:when test="${usuario != null}">
+              <form action="/cursos">
+                <button>Ver RoadMaps!</button>
+              </form>
+            </c:when>
+            <c:otherwise>
+              <form action="/user/new">
+                <button>Registrate!</button>
+              </form>
+            </c:otherwise>
+          </c:choose>
         </div>
         <div class="box-item circle-bck">
           <img src="img/img1.svg" alt="current" />
@@ -151,7 +159,6 @@ language="java" contentType="text/html; charset=UTF-8" %>
 
   <%@ include file="plantillas/footer.jsp" %>
   
-
   <script src="https://cdn.jsdelivr.net/npm/less"></script>
   <script src="js/header.js"></script>
 </body>

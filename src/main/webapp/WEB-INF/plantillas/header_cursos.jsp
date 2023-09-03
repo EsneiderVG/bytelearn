@@ -26,11 +26,8 @@
         </li>
         <li class="menu-item"><a href="#">Contact</a></li>
         <div class="account-section">
-          <i class="fa-solid fa-user" onclick="toggleSlideover()" title="perfil de usuario"></i>
-        </div>
-        <div class="slide-account-section">
-
-          
+          <img src="${usuario.imagenPerfil}" alt="" class="rounded-full mr-3 h-12" onclick="toggleSlideover()" title="perfil de usuario">
+          <!-- <i class="fa-solid fa-user" ></i> -->
         </div>
       </ul>
 
@@ -57,18 +54,18 @@
           </div>
 
           <div class="flex-col mt-6">
-            <img src="https://www.korosenai.es/wp-content/uploads/2019/12/toshinori-yagi-all-might.jpg" alt="x">
+            <img src="${usuario.imagenPerfil}" alt="imagen Perfil">
             <div class="username-act mb-2 p-4">
               <div class="named flex items-center">
-                <p class="text-2xl mr-2 tracking-wide font-semibold	">Ashley Porter</p>
+                <p class="text-2xl mr-2 tracking-wide font-semibold	"><c:out value="${usuario.username}"/></p>
                 <i class="fa-solid fa-circle active-log-user"></i>
               </div>
-              <p class="text-sm">@ashleyporter</p>
+              <p class="text-sm"><c:out value="${usuario.email}"/></p>
             </div>
             <div class="flex-col gap-6 px-4">
-              <button class="bg-indigo-500 py-2 px-4 rounded-xl	">
-                message
-              </button>
+                <a href="/user/${usuario.id}" class="bg-indigo-500 py-2 px-4 rounded-xl	">
+                  Perfil
+                </a>
               <button class="bg-indigo-500 py-2 px-4 rounded-xl	">
                 Save changes
               </button>

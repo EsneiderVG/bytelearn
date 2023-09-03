@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> <%@ page
+language="java" contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,13 +16,13 @@
 
 <body>
 
-    <%@ include file="../../plantillas/header_home.jsp" %>
+    <%@ include file="../../plantillas/header_cursos.jsp" %>
     <div style="margin-top: 100px;"></div>
     <div class="container-main font-normal">
         <div class="flex-row-p mt-6">
             <div class="info-perfil-content flex-col justify-center items-center px-8">
                 <div class="img-perfil">
-                    <img src="https://www.mundodeportivo.com/alfabeta/hero/2022/10/all-might-boku-no-hero.jpg?width=1200"
+                    <img src="${usuario.imagenPerfil}"
                         alt="x" class="img-perfil rounded-full">
                     <button type="button" id="button-change-perfil" class="custom-button boton-avatar">
                         <form class="flex" method="post" enctype="multipart/form-data">
@@ -41,8 +43,8 @@
                     </button>
                 </div>
                 <div class="content-info mt-6">
-                    <h2 class="font-semibold text-xl">Neider Vg</h2>
-                    <p class="mb-4"><span class="mark">@</span>Esneider Velez Gomez</p>
+                    <h2 class="font-semibold text-xl"><c:out value="${usuario.firstName}"/> <c:out value="${usuario.lastName}"/></h2>
+                    <p class="mb-4"><span class="mark">@</span><c:out value="${usuario.username}"/></p>
                     <p class="text-base mb-4">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quod beatae adipisci aliquam
                         eos!

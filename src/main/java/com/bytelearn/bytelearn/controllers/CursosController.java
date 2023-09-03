@@ -15,7 +15,7 @@ import com.bytelearn.bytelearn.services.UsuarioService;
 import jakarta.servlet.http.HttpSession;
 
 @Controller
-@RequestMapping("/cursos")
+@RequestMapping("/curso")
 public class CursosController {
 
     @Autowired
@@ -40,8 +40,13 @@ public class CursosController {
     }
 
     @GetMapping("/roadmap")
-    String roadMapsPage() {
+    String roadMapPage() {
         return "pages/cursos/roadmap.jsp";
+    }
+
+    @GetMapping("/roadmaps")
+    String roadMapsPage(){
+        return "pages/cursos/roadmaps.jsp";
     }
 
 }

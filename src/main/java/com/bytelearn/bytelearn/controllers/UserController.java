@@ -3,9 +3,11 @@ package com.bytelearn.bytelearn.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -20,7 +22,7 @@ import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 
 @Controller
-@RequestMapping("user")
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
@@ -53,8 +55,16 @@ public class UserController {
 
         String encodedPassword = securityUserDetails.bCryptPasswordEncoder().encode(usuarioSingup.getPassword());
         usuarioSingup.setPassword(encodedPassword);
+        usuarioSingup.setImagenPerfil("/img/perfil.jpg");
         usuarioService.save(usuarioSingup);
         return "redirect:/";
+    }
+
+    @GetMapping("/{id}")
+    public String perfil(Model model, @PathVariable("id") Long id){
+        Usuario usuario = usuarioService.findById(id);
+        model.addAttribute("usuario", usuario);
+        return "pages/perfilU/perfil_usuario.jsp";
     }
 
 }

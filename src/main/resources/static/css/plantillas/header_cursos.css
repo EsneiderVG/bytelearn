@@ -8,6 +8,10 @@
     transition: 0.4s;
 }
 
+body{
+    background: var(--background-color2);
+  }
+
 header {
     z-index: 50;
     position: sticky;
@@ -86,10 +90,6 @@ header .navigation {
     opacity: 0;
     transition: 0.5s;
     transition-property: transform, opacity;
-}
-
-header.sticky .menu-item .sub-menu {
-    top: 60px;
 }
 
 .menu-item:hover .sub-menu {

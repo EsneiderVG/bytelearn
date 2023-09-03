@@ -27,7 +27,7 @@ public class WebSecurity {
           request
               .requestMatchers(new AntPathRequestMatcher("/"))
                 .permitAll()
-              .requestMatchers(new AntPathRequestMatcher("/curso/**"))
+              .requestMatchers(new AntPathRequestMatcher("/cursos/**"))
                 .hasAnyRole(USER, ADMIN)
               .anyRequest()
                 .permitAll();
@@ -36,7 +36,7 @@ public class WebSecurity {
           Customizer.withDefaults();
           login
               .loginPage("/login")
-              .defaultSuccessUrl("/curso",true);
+              .defaultSuccessUrl("/cursos",true);
         }))
         .logout(logout -> logout
           .logoutUrl("/logout")

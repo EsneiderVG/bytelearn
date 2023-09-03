@@ -51,6 +51,7 @@ public class seed implements ApplicationRunner {
         usuario.setFirstName("Miguel");
         usuario.setLastName("Castro");
         usuario.setUsername("Miguel");
+        usuario.setImagenPerfil("/img/admin.jpg");
 
         TiposUsarios tipoUsuario = tipoUsuarioService.findByNameContaining(ADMIN);
         usuario.setUserType(tipoUsuario);

@@ -18,22 +18,15 @@
           </ul>
         </li>
         <li class="menu-item">
-          <a class="sub-btn" href="#">Company <i class="fas fa-angle-down"></i></a>
+          <a class="sub-btn" href="#">Contenido<i class="fas fa-angle-down"></i></a>
           <ul class="sub-menu">
-            <li class="sub-item"><a href="/cursos">Cursos</a></li>
+            <li class="sub-item"><a href="/cursos">RoadMaps</a></li>
             <li class="sub-item"><a href="/cursos/roadmap">roadmap</a></li>
             <li class="sub-item"><a href="/cursos/certificate">certificado</a></li>
             <li class="sub-item"><a href="/cursos/view">view</a></li>
-            <li class="sub-item more">
-              <a class="more-btn" href="#">Resource <i class="fas fa-angle-right"></i></a>
-              <ul class="more-menu">
-                <li class="more-item"><a href="#">More Item 01</a></li>
-                <li class="more-item"><a href="#">More Item 02</a></li>
-              </ul>
-            </li>
           </ul>
         </li>
-        <li class="menu-item"><a href="#">Services</a></li>
+        <li class="menu-item"><a href="#">Preguntas frecuentes</a></li>
         <div class="row-flex btns-log-up">
           <c:choose>
             <c:when test="${usuario != null}">

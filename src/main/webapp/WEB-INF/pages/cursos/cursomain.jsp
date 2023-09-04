@@ -7,7 +7,7 @@ language="java" contentType="text/html; charset=UTF-8" %>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GDO - Home</title>
-    <link rel="icon" href="/img/gdo-img.jpg">
+    <link rel="icon" href="/img/gdo-img.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/15c45fe034.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/cursos/cursomain.css">
@@ -23,8 +23,11 @@ language="java" contentType="text/html; charset=UTF-8" %>
         <div class="flex-row-cont">
             <div class="container-boxy-card">
                 <div class="flex items-center my-4">
-                    <img src="${usuario.imagenPerfil}" alt="" class="img-small rounded-full mr-3">
+                    <img src="${usuario.imagenPerfil}" alt="" class="img-medium rounded-full mr-3">
                     <p class="text-2xl font-medium"><c:out value="${usuario.username}"/>, desarrolla tus habilidades y avanza en tu carrera con GDO</p>
+                </div>
+                <div class="mb-6">
+                    Vuelve a centrarte en ti y tus metas. Usa el código EDXFRESHSTART para obtener descuentos en la inscripción de programas seleccionados hasta el 31 de agosto de 2023.
                 </div>
                 <c:if test = "${usuario.userType.id == 2}">
                     <div class="flex">
@@ -33,7 +36,7 @@ language="java" contentType="text/html; charset=UTF-8" %>
                 </c:if>
             </div>
             <div class="circle-bck">
-                <img src="/img/imgCourses.svg" alt="course" class="img-intro">
+                <img src="/img/img-courses-1.svg" alt="course" class="img-intro">
             </div>
             
         </div>  

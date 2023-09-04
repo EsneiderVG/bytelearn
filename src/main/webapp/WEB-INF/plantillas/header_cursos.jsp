@@ -26,7 +26,7 @@
         </li>
         <li class="menu-item"><a href="#">Contact</a></li>
         <div class="account-section">
-          <img src="${usuario.imagenPerfil}" alt="" class="rounded-full mr-3 h-12" onclick="toggleSlideover()" title="perfil de usuario">
+          <img src="${usuario.imagenPerfil}" alt="" class="rounded-full ml-6 h-12 cursor-pointer popup-perfil-head" onclick="toggleSlideover()" title="perfil de usuario">
           <!-- <i class="fa-solid fa-user" ></i> -->
         </div>
       </ul>

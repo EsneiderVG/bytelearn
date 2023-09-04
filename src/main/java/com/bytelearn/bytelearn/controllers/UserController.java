@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.bytelearn.bytelearn.models.TiposUsarios;
 import com.bytelearn.bytelearn.models.Usuario;
@@ -18,6 +19,8 @@ import com.bytelearn.bytelearn.services.TipoUsuarioService;
 import com.bytelearn.bytelearn.services.UsuarioService;
 import com.bytelearn.bytelearn.validator.usuarioValidator;
 
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 
@@ -44,7 +47,7 @@ public class UserController {
 
     @PostMapping("/new")
     public String createUser(@Valid @ModelAttribute(value = "registroUsuario") Usuario usuarioSingup,
-            BindingResult results, HttpSession session) {
+            BindingResult results, HttpServletRequest request) throws ServletException {
         usuarioValidator.validate(usuarioSingup, results);
         if (results.hasErrors()) {
             return "pages/login/login.jsp";
@@ -57,7 +60,8 @@ public class UserController {
         usuarioSingup.setPassword(encodedPassword);
         usuarioSingup.setImagenPerfil("/img/perfil.jpg");
         usuarioService.save(usuarioSingup);
-        return "redirect:/";
+        request.login(usuarioSingup.getEmail(), usuarioSingup.getConfirmPassword());
+        return "redirect:/cursos";
     }
 
     @GetMapping("/{id}")
@@ -65,6 +69,16 @@ public class UserController {
         Usuario usuario = usuarioService.findById(id);
         model.addAttribute("usuario", usuario);
         return "pages/perfilU/perfil_usuario.jsp";
+    }
+
+    @GetMapping("/{id}/edit")
+    public String editar(Model model, @PathVariable("id") Long id, @RequestParam(value = "userID") Long userId){
+        Usuario usuario = usuarioService.findById(id);
+        if(usuario.getId() != userId || userId == null){
+            return "redirect:/cursos";
+        }
+        model.addAttribute("usuario", usuario);
+        return "pages/perfilU/EditarPerfil.jsp";
     }
 
 }

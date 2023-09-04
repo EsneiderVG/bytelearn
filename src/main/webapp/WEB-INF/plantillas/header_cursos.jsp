@@ -63,13 +63,12 @@
               <p class="text-sm"><c:out value="${usuario.email}"/></p>
             </div>
             <div class="flex-col gap-6 px-4">
-                <a href="/user/${usuario.id}" class="bg-indigo-500 py-2 px-4 rounded-xl	">
+                <a href="/user/${usuario.id}" class="bg-indigo-500 py-2 px-4 rounded-xl	mr-2">
                   Perfil
                 </a>
-              <button class="bg-indigo-500 py-2 px-4 rounded-xl	">
-                Save changes
-              </button>
-
+                <a href="/user/${usuario.id}/edit?userID=${usuario.id}" class="bg-indigo-500 py-2 px-4 rounded-xl	mr-2">
+                  Editar perfil
+                </a>
               <button id="dropdownDividerButton" data-dropdown-toggle="dropdownleft" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-3.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button"><svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
               </svg></button>

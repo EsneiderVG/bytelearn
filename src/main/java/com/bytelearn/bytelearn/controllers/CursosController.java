@@ -15,7 +15,7 @@ import com.bytelearn.bytelearn.services.UsuarioService;
 import jakarta.servlet.http.HttpSession;
 
 @Controller
-@RequestMapping("/curso")
+@RequestMapping("/cursos")
 public class CursosController {
 
     @Autowired

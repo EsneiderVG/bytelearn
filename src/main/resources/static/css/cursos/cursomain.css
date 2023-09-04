@@ -16,7 +16,7 @@
     --color-p: #30a6eb;
     --color-p-t: #30a6eb4d;
     --color-p-hover: #4f9bff;
-    --background-color2: #112125;
+    --background-color2: #000000;
     --color-p-buttons-filter: #30a6eb91;
     --back-color: #0e1c1d;
     --pd-page: 40px;
@@ -82,6 +82,14 @@ a {
 
 .img-small {
     width: 30px;
+}
+
+.img-medium{
+    object-fit: cover;
+    width: 80px;
+    -webkit-box-shadow: -1px 0px 26px 1px rgba(48, 166, 235, 0.73);
+    -moz-box-shadow: -1px 0px 26px 1px rgba(48, 166, 235, 0.73);
+    box-shadow: -1px 0px 26px 1px rgba(48, 166, 235, 0.73);
 }
 
 .buttons-neon {

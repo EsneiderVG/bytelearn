@@ -10,7 +10,7 @@
 
 body{
     background: var(--background-color2);
-  }
+}
 
 header {
     z-index: 50;
@@ -200,6 +200,17 @@ header .navigation {
 .slider-account{
     width: 360px;
     background: var(--background-color2);
+}
+
+.popup-perfil-head{
+    width: 50px;
+    object-fit: cover;
+}
+
+.popup-perfil-head:hover{
+    -webkit-box-shadow: -1px 0px 26px 1px rgba(48, 166, 235, 0.73);
+    -moz-box-shadow: -1px 0px 26px 1px rgba(48, 166, 235, 0.73);
+    box-shadow: -1px 0px 26px 1px rgba(48, 166, 235, 0.73);
 }
 
 @media (max-width: 1024px) {

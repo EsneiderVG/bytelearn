@@ -13,6 +13,7 @@ language="java" contentType="text/html; charset=UTF-8" %>
     <link rel="stylesheet" href="/css/cursos/cursomain.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/components/popup.css">
 
 </head>
 <body>
@@ -20,6 +21,7 @@ language="java" contentType="text/html; charset=UTF-8" %>
 <%@ include file="../../plantillas/header_cursos.jsp" %>    
 
     <div class="container mx-auto mt-10 adp-main">
+
         <div class="flex-row-cont">
             <div class="container-boxy-card">
                 <div class="flex items-center my-4">
@@ -31,7 +33,7 @@ language="java" contentType="text/html; charset=UTF-8" %>
                 </div>
                 <c:if test = "${usuario.userType.id == 2}">
                     <div class="flex">
-                        <a href="" class=" text-white font-bold py-2 px-4 rounded buttons-neon">Crear nueva ruta</a>
+                        <button id="btn-abrir-popup" class="buttons-neon text-white font-bold py-2 px-4 rounded ">Crear nueva ruta</button>
                     </div>
                 </c:if>
             </div>
@@ -368,30 +370,21 @@ language="java" contentType="text/html; charset=UTF-8" %>
                 </button>
             </div>
 
-        </div>  
+        </div>   
 
+        <c:import url="popups/crearRutaAprendizaje.jsp">
+            <c:param name="selected" value="Welcome to Page 1"/>
+            <c:param name="x" value="python"/>
+        </c:import> 
         
 
-        <script>
-            const containers = document.querySelectorAll('.card-road');
-
-            containers.forEach(container => {
-            container.addEventListener('mouseenter', () => {
-                containers.forEach(c => c.classList.remove('active'));
-                container.classList.add('active');
-            });
-
-            container.addEventListener('mouseleave', () => {
-                container.classList.remove('active');
-            });
-            });
-        </script>
     </div>       
 
     <%@ include file="../../plantillas/footer.jsp" %>
 
-    <!-- <script src="cursosMain.js"></script> -->
+    <script src="/js/cardsColor.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="/js/popup.js"></script>
 
 </body>
 </html>

@@ -176,6 +176,12 @@ body {
     transform: scale(1.1);
 }
 
+.butones-plt1{
+    background: none;
+    background: red;
+    border: none;
+}
+
 @media all and (max-width: 880px) {
     .flex-row-p{
         flex-direction: column;

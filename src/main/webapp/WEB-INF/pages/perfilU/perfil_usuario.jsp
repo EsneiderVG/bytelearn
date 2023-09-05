@@ -44,21 +44,6 @@
                                 Edit profile
                             </button>
                         </form>
-                        <!-- <div class="stat-user-flex flex items-center gap-4 my-5">
-                            <p>
-                                <i class="fa-solid fa-users"></i>
-                                <span class="ml-1 text-sm">1 followers</span>
-                            </p>
-                            <p>
-                                <i class="fa-solid fa-users"></i>
-                                <span class="ml-1 text-sm">1 followers</span>
-                            </p>
-                        </div>
-
-                        <p>
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span class="ml-1 text-sm">Colombia</span>
-                        </p> -->
 
                         <hr class="my-4">
 

@@ -108,8 +108,8 @@
   </c:import> 
 
   <%@ include file="../../plantillas/footer.jsp" %>
-  <script src="/js/popup.js"></script>
   <script src="/js/login.js"></script>
+  <script src="/js/popup.js"></script>
 
 </body>
 </html>

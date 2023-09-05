@@ -40,12 +40,16 @@ public class CursosController {
     }
 
     @GetMapping("/roadmap")
-    String roadMapPage() {
+    String roadMapPage(Principal principal, Model model, HttpSession session) {
+        Usuario usuario = usuarioService.findByemail(principal.getName());
+        model.addAttribute("usuario", usuario);
         return "pages/cursos/roadmap.jsp";
     }
 
     @GetMapping("/roadmaps")
-    String roadMapsPage(){
+    String roadMapsPage(Principal principal, Model model, HttpSession session){
+        Usuario usuario = usuarioService.findByemail(principal.getName());
+        model.addAttribute("usuario", usuario);
         return "pages/cursos/roadmaps.jsp";
     }
 

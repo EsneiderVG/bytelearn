@@ -1,6 +1,17 @@
 @import "vars.css";
 
-body{
-    color: white;
-    background: var(--background-color2);
+html,
+body {
+  font-family: "Roboto", sans-serif;
+}
+.break-inside {
+  -moz-column-break-inside: avoid;
+  break-inside: avoid;
+}
+body, .body-sect {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
 }

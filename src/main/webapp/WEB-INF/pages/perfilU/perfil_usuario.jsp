@@ -32,11 +32,11 @@
                         <p class="mb-4"><span class="mark">@</span>
                             <c:out value="${usuario.username}" />
                         </p>
-                        <p class="text-base mb-4">
+                        <!-- <p class="text-base mb-4">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quod beatae
                             adipisci aliquam
                             eos!
-                        </p>
+                        </p> -->
                         <form action="/user/${usuario.id}/edit">
                             <button
                                 class="w-full button-edit p-2 rounded-lg focus:ring-2  dark:focus:ring-blue-700 focus:outline-none focus:ring-blue-200">

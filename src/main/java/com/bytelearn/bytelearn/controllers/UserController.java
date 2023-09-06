@@ -90,12 +90,7 @@ public class UserController {
         }
     }
 
-    @GetMapping("/contra")
-    public String dato (){
-        return "redirect:/cursos";
-    }
-
-    @PostMapping("/{id}/edita")
+    @GetMapping("/{id}/edita")
     public String saveChanges(@PathVariable("id") Long id, @RequestParam(value = "firstName") String firstName,
             @RequestParam(value = "lastName") String lastName, @RequestParam(value = "username") String username,
             @RequestParam(value = "email") String email, HttpSession session, Principal principal,
@@ -109,17 +104,72 @@ public class UserController {
             if (!validarUsuario(usuario.getId(), usuarioSesion.getId())) {
                 return "redirect:/cursos";
             }
-            if (!validarDatosUnicos(email)) {
+            if (!validarDatosUnicos(email, usuario)) {
+                if (!validarDatosUnicos(username, usuario)) {
+                    redirectAttributes.addFlashAttribute("Username", "username ya en uso");
+                }
                 redirectAttributes.addFlashAttribute("correoErroneo", "correo ya en uso");
-                return "redirect:/" + id + "/edit";
+                return "redirect:/user/" + id + "/edit";
             }
-            return "redirect:/" + id;
+            usuario.setFirstName(firstName);
+            usuario.setLastName(lastName);
+            usuario.setEmail(email);
+            usuario.setUsername(username);
+            usuarioService.save(usuario);
+            return "redirect:/user/" + id;
         }
     }
 
-    private boolean validarDatosUnicos(String email) {
-        Usuario verificarDatos = usuarioService.findByemail(email);
-        if (verificarDatos == null) {
+    @GetMapping("/{id}/chancePassword")
+    public String changePasswords(@PathVariable("id") Long id, @RequestParam(value = "password") String password,
+            @RequestParam(value = "confirmPassword") String confirmPassword, Principal principal,
+            RedirectAttributes redirectAttributes) {
+        Usuario usuario = usuarioService.findById(id);
+        if (!validarSession(principal)) {
+            System.out.println(principal);
+            return "redirect:/login";
+        } else {
+            Usuario usuarioSesion = usuarioService.findByemail(principal.getName());
+            if (!validarUsuario(usuario.getId(), usuarioSesion.getId())) {
+                return "redirect:/cursos";
+            }
+            if (!password.equals(confirmPassword)) {
+                if (password.length()<=8) {
+                    redirectAttributes.addFlashAttribute("passwordSize", "la contraseña debe contener minimo de 8 caracteres");
+                }
+                redirectAttributes.addFlashAttribute("confirmPassword", "las contraseñas no coinciden");
+                return "redirect:/user/" + id + "/edit";
+            }
+            String encodedPassword = securityUserDetails.bCryptPasswordEncoder().encode(password);
+            usuario.setPassword(encodedPassword);
+            usuarioService.save(usuario);
+            return "redirect:/logout";
+        }
+    }
+
+    @GetMapping("/{id}/delete")
+    public String deleteAccount(@PathVariable("id") Long id,  Principal principal) {
+        Usuario usuario = usuarioService.findById(id);
+        if (!validarSession(principal)) {
+            System.out.println(principal);
+            return "redirect:/login";
+        } else {
+            Usuario usuarioSesion = usuarioService.findByemail(principal.getName());
+            if (!validarUsuario(usuario.getId(), usuarioSesion.getId())) {
+                return "redirect:/cursos";
+            }
+            usuarioService.deleteUser(usuarioSesion.getId());
+            return "redirect:/logout";
+        }
+    }
+
+    private boolean validarDatosUnicos(String valorUnico, Usuario usuario) {
+        Usuario verificarDatos = usuarioService.findByemail(valorUnico);
+        if (verificarDatos != null && verificarDatos != usuario) {
+            return false;
+        }
+        verificarDatos = usuarioService.findByUsername(valorUnico);
+        if (verificarDatos != null && verificarDatos != usuario) {
             return false;
         }
         return true;

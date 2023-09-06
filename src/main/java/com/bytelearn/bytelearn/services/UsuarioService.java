@@ -18,8 +18,21 @@ public class UsuarioService extends ServicioBase<Usuario> {
         super(repositorioBase);
     }
 
+    public void deleteUser(Long id){
+        repositorie.deleteById(id);
+    }
+
     public Usuario findByemail(String email){
         Usuario user = repositorie.findByEmail(email);
+        if(user != null){
+            return user;
+        }else{
+            return null;
+        }
+    }
+
+    public Usuario findByUsername(String email){
+        Usuario user = repositorie.findByUsername(email);
         if(user != null){
             return user;
         }else{

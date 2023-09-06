@@ -4,6 +4,7 @@ import java.security.Principal;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -134,8 +135,9 @@ public class UserController {
                 return "redirect:/cursos";
             }
             if (!password.equals(confirmPassword)) {
-                if (password.length()<=8) {
-                    redirectAttributes.addFlashAttribute("passwordSize", "la contraseña debe contener minimo de 8 caracteres");
+                if (password.length() <= 8) {
+                    redirectAttributes.addFlashAttribute("passwordSize",
+                            "la contraseña debe contener minimo de 8 caracteres");
                 }
                 redirectAttributes.addFlashAttribute("confirmPassword", "las contraseñas no coinciden");
                 return "redirect:/user/" + id + "/edit";
@@ -147,9 +149,11 @@ public class UserController {
         }
     }
 
-    @GetMapping("/{id}/delete")
-    public String deleteAccount(@PathVariable("id") Long id,  Principal principal) {
+    @GetMapping("/{id}/delete/{password}")
+    public String deleteAccount(@PathVariable("id") Long id, Principal principal,
+            @PathVariable("password") String password, RedirectAttributes redirectAttributes) {
         Usuario usuario = usuarioService.findById(id);
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         if (!validarSession(principal)) {
             System.out.println(principal);
             return "redirect:/login";
@@ -157,6 +161,10 @@ public class UserController {
             Usuario usuarioSesion = usuarioService.findByemail(principal.getName());
             if (!validarUsuario(usuario.getId(), usuarioSesion.getId())) {
                 return "redirect:/cursos";
+            }
+            if (!encoder.matches(password, usuarioSesion.getPassword())) {
+                redirectAttributes.addFlashAttribute("Password", "las contraseña no coincide");
+                return "redirect:/user/" + id + "/edit";
             }
             usuarioService.deleteUser(usuarioSesion.getId());
             return "redirect:/logout";

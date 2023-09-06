@@ -46,11 +46,11 @@
 
                         <hr class="my-4">
 
-                        <p class="text-xl">Archievement</p>
+                        <!-- <p class="text-xl">Archievement</p>
                         <div class="stat-user-flex flex pt-2">
                             <img src="https://www.mundodeportivo.com/alfabeta/hero/2022/10/all-might-boku-no-hero.jpg?width=1200"
                                 alt="" class="cards-medallas rounded-full">
-                        </div>
+                        </div> -->
 
                     </div>
                     <!-- <span>text</span> -->

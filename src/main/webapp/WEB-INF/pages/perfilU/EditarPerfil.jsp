@@ -12,6 +12,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/css/perfilU/perfil_usuario.css">
     <script src="https://kit.fontawesome.com/15c45fe034.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -41,11 +42,11 @@
                     </form>
                     <hr class="my-4">
 
-                    <p class="text-xl">Archievement</p>
+                    <!-- <p class="text-xl">Archievement</p>
                     <div class="stat-user-flex flex pt-2">
                         <img src="https://www.mundodeportivo.com/alfabeta/hero/2022/10/all-might-boku-no-hero.jpg?width=1200"
                             alt="" class="cards-medallas rounded-full">
-                    </div>
+                    </div> -->
 
                 </div>
                 <!-- <span>text</span> -->
@@ -158,8 +159,33 @@
 
                 <div class="">
                     <h1>Eliminar Cuenta</h1>
-                    <form action="/user/${usuario.id}/delete">
-                        <button type="submit" class="button-edit focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 mt-3 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
+                    <p class="text-red-600 text-lg">
+                        <c:out value="${Password}"/>
+                        </p>
+                    <form action="">
+                        <button type="button" onclick="(async () => {
+
+                            const { value: password } = await Swal.fire({
+                              icon: 'error',
+                              title: 'Ingresa su contraseña',
+                              input: 'password',
+                              inputPlaceholder: 'Ingresa su contraseña',
+                              inputAttributes: {
+                                minlength: 8,
+                                autocapitalize: 'off',
+                                autocorrect: 'off'
+                              },
+                              timer: 7000,
+                              showCancelButton: true,
+                              progressSteps: true
+                            })
+                            
+                            if (password) {
+                              window.location = '/user/${usuario.id}/delete/'+password;
+                            }
+                            
+                            })()" 
+                        class="button-edit focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 mt-3 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
                             Eliminar Cuenta</button>
                     </form> 
                 </div>

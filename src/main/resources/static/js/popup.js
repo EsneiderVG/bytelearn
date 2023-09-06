@@ -1,3 +1,6 @@
+
+// popup individual solo proposito
+
 var btnAbrirPopup = document.getElementById('btn-abrir-popup'),
 	overlay = document.getElementById('overlay'),
 	popup = document.getElementById('popup'),
@@ -13,3 +16,13 @@ btnCerrarPopup.addEventListener('click', function(e){
 	overlay.classList.remove('active');
 	popup.classList.remove('active');
 });
+
+// animationPopups(this.dataset.modalToggle)
+// control del modal
+// function animationPopups(dataModal){
+// 	var modal = document.getElementById(dataModal);
+	
+// 	setTimeout(function() {
+// 		modal.classList.remove("animation-up");
+// 	}, 1500);
+// }

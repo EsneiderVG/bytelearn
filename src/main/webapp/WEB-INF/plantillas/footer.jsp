@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/css/plantillas/footer.css">
-<footer class="mx-12">
-    <div class="cont-footer row-flex gp-50 justify-center">
+<footer class="px-12">
+    <div class="cont-footer row-flex gp-25 justify-center">
       <div class="item-fot">
         <div class="logo row-flex center-x">
           <img src="/img/gdo-img.png" alt="xd" width="35" />

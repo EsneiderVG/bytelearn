@@ -1,13 +1,13 @@
-@import "vars.css";
-
 .gp-100{
     gap: 100px;
 }
 
 footer{
     color: #ffffff;
-    padding: 0px var(--pd-page);
+    padding: 0px 20px;
     background: var(--background-color2);
+    box-shadow: 0 5px 25px rgba(32, 240, 255, 0.2);
+    width: 100%;
 }
 
 .item-fot{
@@ -52,8 +52,9 @@ footer{
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 400px) {
     .cont-footer{
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
     }
 }

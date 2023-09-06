@@ -38,7 +38,6 @@
                             eos!
                         </p>
                         <form action="/user/${usuario.id}/edit">
-                            <input name="userID" type="hidden" value="${usuario.id}"/>
                             <button
                                 class="w-full button-edit p-2 rounded-lg focus:ring-2  dark:focus:ring-blue-700 focus:outline-none focus:ring-blue-200">
                                 Edit profile

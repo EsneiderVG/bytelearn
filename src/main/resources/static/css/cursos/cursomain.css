@@ -81,7 +81,13 @@ a {
 }
 
 .img-small {
+    object-fit: cover;
     width: 30px;
+}
+
+.img-slide-header{
+    object-fit: cover;
+    width: 360px;
 }
 
 .img-medium{
@@ -354,9 +360,23 @@ a {
 
 @media screen and (max-width: 400px) {
 
+    .height-adp {
+        height: 1420px;
+    }
 
     .progress-text {
         margin-top: 40px;
     }
+
+    .flex-row-cont-selected {
+        display: grid;
+        grid-template-columns: 
+            repeat(
+                auto-fit,
+                minmax(300px, 1fr)
+        );
+        gap: 20px;
+    }
+    
 
 }

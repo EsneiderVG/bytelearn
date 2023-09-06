@@ -5,16 +5,17 @@
       <a href="/" class="logo">GDO</a>
     </div>
 
-    <div class="navegation-pages-cont row-flex center-x">
+    <div id="content-origin-searcher"></div>
+    <div class="navegation-pages-cont row-flex center-x" id="searcher">
       <label class="searcher-icon" for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
-      <input class="searcher-head" type="text" name="search" id="search" placeholder="Buscar contenido">
+      <input class="searcher-head " type="text" name="search" id="search" placeholder="Buscar contenido">
     </div>
 
     <div class="navigation">
-      <ul class="menu row-flex center-x">
+      <ul class="menu row-flex center-x" id="content-things-responsive">
         <div class="close-btn"></div>
+        <div id="insert-search-hid"></div>
         <li class="menu-item"><a href="#">Home</a></li>
-
         <li class="menu-item">
           <a class="sub-btn" href="#">Learn <i class="fas fa-angle-down"></i></a>
           <ul class="sub-menu">
@@ -54,7 +55,7 @@
           </div>
 
           <div class="flex-col mt-6">
-            <img src="${usuario.imagenPerfil}" alt="imagen Perfil">
+            <img src="${usuario.imagenPerfil}" alt="imagen Perfil" class="img-slide-header">
             <div class="username-act mb-2 p-4">
               <div class="named flex items-center">
                 <p class="text-2xl mr-2 tracking-wide font-semibold	"><c:out value="${usuario.username}"/></p>
@@ -110,3 +111,4 @@
 
 
 <script src="/js/header.js"></script>
+<script src="/js/header-cursos.js"></script>

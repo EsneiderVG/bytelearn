@@ -23,6 +23,13 @@ public class usuarioValidator implements Validator {
         Usuario usuario = (Usuario) target;
         validarContraseña(usuario, errors);
         validarCorreo(usuario,errors);
+        ValidarUsername(usuario,errors);
+    }
+
+    private void ValidarUsername(Usuario usuario, Errors errors) {
+        if(usuarioService.findByUsername(usuario.getUsername()) != null){
+            errors.rejectValue("username", "usernameInvalido");
+        }
     }
 
     private void validarCorreo(Usuario usuario, Errors errors) {

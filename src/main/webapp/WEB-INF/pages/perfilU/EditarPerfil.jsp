@@ -12,6 +12,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/css/perfilU/perfil_usuario.css">
     <script src="https://kit.fontawesome.com/15c45fe034.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -28,11 +29,11 @@
                 <div class="content-info mt-6">
                     <h2 class="font-semibold text-xl"><c:out value="${usuario.firstName}"/> <c:out value="${usuario.lastName}"/></h2>
                     <p class="mb-4"><span class="mark">@</span><c:out value="${usuario.username}"/></p>
-                    <p class="text-base mb-4">
+                    <!-- <p class="text-base mb-4">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quod beatae
                         adipisci aliquam
                         eos!
-                    </p>
+                    </p> -->
                     <form action="/user/${usuario.id}">
                         <button
                             class="w-full button-edit p-2 rounded-lg focus:ring-2  dark:focus:ring-blue-700 focus:outline-none focus:ring-blue-200">
@@ -41,11 +42,11 @@
                     </form>
                     <hr class="my-4">
 
-                    <p class="text-xl">Archievement</p>
+                    <!-- <p class="text-xl">Archievement</p>
                     <div class="stat-user-flex flex pt-2">
                         <img src="https://www.mundodeportivo.com/alfabeta/hero/2022/10/all-might-boku-no-hero.jpg?width=1200"
                             alt="" class="cards-medallas rounded-full">
-                    </div>
+                    </div> -->
 
                 </div>
                 <!-- <span>text</span> -->
@@ -60,34 +61,37 @@
                 <hr class="my-4">
                 <div class="">
                     <h1>Información general</h1>
-                    <form action="" method="post">
+                    <form action="/user/${usuario.id}/edita">
+                        <input type="hidden" name="_method" value="post">
                         <div class="flex items-center mt-10 mb-6 gap-4">
-
                             <div class="relative z-0 w-full group">
-                                <input type="text" name="floating_email" id="floating_firstnames" class="block p-2 pl-2 px-0 w-full text-base text-white bg-gray-50 border border-gray-300 rounded-lg bg-transparent border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 peer" placeholder="" required 
+                                <input type="text" id="floating_firstnames" class="block p-2 pl-2 px-0 w-full text-base text-white bg-gray-50 border border-gray-300 rounded-lg bg-transparent border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 peer" placeholder="" required 
                                 name="firstName"
                                 value="${usuario.firstName}"
                                 />
                                 <label for="floating_firstnames" class="peer-focus:font-medium absolute text-base text-white duration-300 transform -translate-y-9 scale-100 top-2.5 -z-10 pl-2 origin-[0] peer-focus:left-0 peer-focus:text-[#30a6eb]  peer-focus:dark:text-[#30a6eb]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-100 peer-focus:-translate-y-9">
                                     <i class="fa-solid fa-envelope mr-1"></i> 
-                                    First Names
+                                    Nombres
                                 </label>
                             </div>
     
                             <div class="relative z-0 w-full group">
-                                <input type="email" name="floating_email" id="floating_lastnames" class="block p-2 pl-2 px-0 w-full text-base text-white bg-gray-50 border border-gray-300 rounded-lg bg-transparent border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 peer" placeholder=" " required 
+                                <input type="text" id="floating_lastnames" class="block p-2 pl-2 px-0 w-full text-base text-white bg-gray-50 border border-gray-300 rounded-lg bg-transparent border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 peer" placeholder=" " required 
                                 name="lastName"
                                 value="${usuario.lastName}"
                                 />
                                 <label for="floating_lastnames" class="peer-focus:font-medium absolute text-base text-white duration-300 transform -translate-y-9 scale-100 top-2.5 -z-10 pl-2 origin-[0] peer-focus:left-0 peer-focus:text-[#30a6eb]  peer-focus:dark:text-[#30a6eb]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-100 peer-focus:-translate-y-9">
                                     <i class="fa-solid fa-envelope mr-1"></i> 
-                                    Lasts Names
+                                    Apellidos
                                 </label>
                             </div>
                         </div>
 
                         <div class="relative z-0 w-full group mt-8 mb-10">
-                            <input type="email" name="floating_email" id="floating_email" class="block p-2 pl-2 px-0 w-full text-base text-white bg-gray-50 border border-gray-300 rounded-lg bg-transparent border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 peer" placeholder=" " required 
+                            <p class="text-red-600">
+                                <c:out value="${correoErroneo}"/>
+                            </p>
+                            <input type="email" id="floating_email" class="block p-2 pl-2 px-0 w-full text-base text-white bg-gray-50 border border-gray-300 rounded-lg bg-transparent border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 peer" placeholder=" " required 
                             name="email"
                             value="${usuario.email}"
                             />
@@ -98,8 +102,11 @@
                         </div>
 
                         <div class="relative z-0 w-full group my-8">
-                            <input type="text" name="floating_email" id="floating_username" class="block p-2 pl-2 px-0 w-full text-base text-white bg-gray-50 border border-gray-300 rounded-lg bg-transparent border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 peer" placeholder=" " required 
-                            name=""
+                            <p class="text-red-600">
+                                <c:out value="${Username}"/>
+                            </p>
+                            <input type="text" id="floating_username" class="block p-2 pl-2 px-0 w-full text-base text-white bg-gray-50 border border-gray-300 rounded-lg bg-transparent border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 peer" placeholder=" " required 
+                            name="username"
                             value="${usuario.username}"
                             />
                             <label for="floating_username" class="peer-focus:font-medium absolute text-base text-white duration-300 transform -translate-y-9 scale-100 top-2.5 -z-10 pl-2 origin-[0] peer-focus:left-0 peer-focus:text-[#30a6eb]  peer-focus:dark:text-[#30a6eb] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-100 peer-focus:-translate-y-9">
@@ -108,8 +115,6 @@
                             </label>
                         </div>
                         <button class="button-edit p-2 rounded-lg focus:ring-2  dark:focus:ring-blue-700 focus:outline-none focus:ring-blue-200 bg-[#30a6eb]" type="submit">Guardar</button>
-                        
-
                     </form> 
                 </div>
                 <hr class="my-4">
@@ -118,26 +123,32 @@
                         <i class="fa-solid fa-user-pen mr-2"></i>
                         <h1 class="text-xl py-2">Seguridad de la cuenta:</h1>
                     </div>
-                    <form action="" method="post">
+                    <form action="/user/${usuario.id}/chancePassword">
                         <div class="flex items-center mt-4 mb-8 gap-4">
                             <div class="relative z-0 w-full group">
-                                <input type="password" name="floating_email" id="floating_password" class="block p-2 pl-2 px-0 w-full text-base text-white bg-gray-50 border border-gray-300 rounded-lg bg-transparent border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 peer" placeholder=" " required 
-                                name=""
+                                <input type="password" id="floating_password" class="block p-2 pl-2 px-0 w-full text-base text-white bg-gray-50 border border-gray-300 rounded-lg bg-transparent border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 peer" placeholder=" " required 
+                                name="password"
                                 />
                                 <label for="floating_password" class="peer-focus:font-medium absolute text-base text-white duration-300 transform -translate-y-9 scale-100 top-2.5 -z-10 pl-2 origin-[0] peer-focus:left-0 peer-focus:text-[#30a6eb]  peer-focus:dark:text-[#30a6eb]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-100 peer-focus:-translate-y-9">
                                     <i class="fa-solid fa-envelope mr-1"></i> 
                                     Password
                                 </label>
+                                <p class="text-red-600">
+                                <c:out value="${passwordSize}"/>
+                                </p>
                             </div>
     
                             <div class="relative z-0 w-full group">
-                                <input type="password" name="floating_email" id="floating_password_confirm" class="block p-2 pl-2 px-0 w-full text-base text-white bg-gray-50 border border-gray-300 rounded-lg bg-transparent border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 peer" placeholder=" " required 
-                                name=""
+                                <input type="password" id="floating_password_confirm" class="block p-2 pl-2 px-0 w-full text-base text-white bg-gray-50 border border-gray-300 rounded-lg bg-transparent border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 peer" placeholder=" " required 
+                                name="confirmPassword"
                                 />
                                 <label for="floating_password_confirm" class="peer-focus:font-medium absolute text-base text-white duration-300 transform -translate-y-9 scale-100 top-2.5 -z-10 pl-2 origin-[0] peer-focus:left-0 peer-focus:text-[#30a6eb]  peer-focus:dark:text-[#30a6eb]  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-100 peer-focus:-translate-y-9">
                                     <i class="fa-solid fa-envelope mr-1"></i> 
                                     Confirm Password
                                 </label>
+                                <p class="text-red-600">
+                                <c:out value="${confirmPassword}"/>
+                                </p>
                             </div>
                         </div>
 
@@ -148,8 +159,34 @@
 
                 <div class="">
                     <h1>Eliminar Cuenta</h1>
+                    <p class="text-red-600 text-lg">
+                        <c:out value="${Password}"/>
+                        </p>
                     <form action="">
-                        <button type="submit" class="button-edit focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">borrar cuenta</button>
+                        <button type="button" onclick="(async () => {
+
+                            const { value: password } = await Swal.fire({
+                              icon: 'error',
+                              title: 'Ingresa su contraseña',
+                              input: 'password',
+                              inputPlaceholder: 'Ingresa su contraseña',
+                              inputAttributes: {
+                                minlength: 8,
+                                autocapitalize: 'off',
+                                autocorrect: 'off'
+                              },
+                              timer: 7000,
+                              showCancelButton: true,
+                              progressSteps: true
+                            })
+                            
+                            if (password) {
+                              window.location = '/user/${usuario.id}/delete/'+password;
+                            }
+                            
+                            })()" 
+                        class="button-edit focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 mt-3 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
+                            Eliminar Cuenta</button>
                     </form> 
                 </div>
             </div>

@@ -18,12 +18,14 @@ public class WebSecurity {
   @Value("${role_admin}")
   private String ADMIN;
 
+  
   @Bean
   SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
     http
         .csrf(Customizer.withDefaults())
         .authorizeHttpRequests((request) -> {
+            
           request
               .requestMatchers(new AntPathRequestMatcher("/"))
                 .permitAll()

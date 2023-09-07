@@ -30,9 +30,9 @@ public class WebSecurity {
               .requestMatchers(new AntPathRequestMatcher("/"))
                 .permitAll()
               .requestMatchers(new AntPathRequestMatcher("/cursos/**"))
-                .hasAnyRole(USER, ADMIN)   
-              .requestMatchers(new AntPathRequestMatcher("/roadmaps/**"))
-                .permitAll()  
+                .hasAnyRole(USER, ADMIN)
+              .requestMatchers(new AntPathRequestMatcher("/roadmaps/new"))
+                .hasAnyRole(ADMIN)
               .anyRequest()
                 .permitAll();
         })

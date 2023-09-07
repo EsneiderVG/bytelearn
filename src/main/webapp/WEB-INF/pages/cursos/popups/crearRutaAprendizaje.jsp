@@ -1,7 +1,9 @@
 <div class="overlay" id="overlay">
-    <div class="popup" id="popup">
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+    <%@ page language="java" contentType="text/html; charset=UTF-8" %>
+    <div class="popup bg-slate-900" id="popup">
         <a href="#" id="btn-cerrar-popup" style="color: black;" class="text-black btn-cerrar-popup">
-            <i class="fas fa-times"></i>
+            <i class="fa-solid fa-x" style="color: #ffffff;"></i>
         </a>
         <div class="content_popu_row">
             <div class="info flex flex-col items-center justify-center gap-8">
@@ -23,18 +25,18 @@
 
             </div>
             <div class="flex-col items-center ml-6">
-                <form>
+                <form action="/roadmaps/new" method="post">
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                     <div class="mb-6">
                       <label for="nombre_ruta" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre de la ruta</label>
-                      <input type="text" id="nombre_ruta" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Java rute 2" required>
+                      <input type="text" id="nombre_ruta" name="name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+                      <p class="text-red-600">
+                          <c:out value="${roadmapName}"/>
+                      </p>
                     </div>
                     <div class="mb-6">
                       <label for="descripcion" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descripcion</label>
-                      <input type="text" id="descripcion" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
-                    </div>
-                    <div class="mb-6">
-                      <label for="tematica" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Temas a ver:</label>
-                      <input type="text" id="tematica" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+                      <input type="text" id="descripcion" name="description" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
                     </div>
                     
                     <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Guardar ruta</button>

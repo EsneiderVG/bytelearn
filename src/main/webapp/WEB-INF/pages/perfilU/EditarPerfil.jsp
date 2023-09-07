@@ -61,8 +61,8 @@
                 <hr class="my-4">
                 <div class="">
                     <h1>Información general</h1>
-                    <form action="/user/${usuario.id}/edita">
-                        <input type="hidden" name="_method" value="post">
+                    <form action="/user/${usuario.id}/edit" method="post">
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                         <div class="flex items-center mt-10 mb-6 gap-4">
                             <div class="relative z-0 w-full group">
                                 <input type="text" id="floating_firstnames" class="block p-2 pl-2 px-0 w-full text-base text-white bg-gray-50 border border-gray-300 rounded-lg bg-transparent border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 peer" placeholder="" required 
@@ -123,7 +123,8 @@
                         <i class="fa-solid fa-user-pen mr-2"></i>
                         <h1 class="text-xl py-2">Seguridad de la cuenta:</h1>
                     </div>
-                    <form action="/user/${usuario.id}/chancePassword">
+                    <form action="/user/${usuario.id}/chancePassword" method="post">
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                         <div class="flex items-center mt-4 mb-8 gap-4">
                             <div class="relative z-0 w-full group">
                                 <input type="password" id="floating_password" class="block p-2 pl-2 px-0 w-full text-base text-white bg-gray-50 border border-gray-300 rounded-lg bg-transparent border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 peer" placeholder=" " required 

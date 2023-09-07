@@ -25,7 +25,6 @@ import com.bytelearn.bytelearn.validator.usuarioValidator;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 
 @Controller

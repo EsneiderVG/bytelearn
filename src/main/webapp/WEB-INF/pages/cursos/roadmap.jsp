@@ -23,7 +23,7 @@ language="java" contentType="text/html; charset=UTF-8" %>
         <div class="flex items-center gap-4 mb-4 justify-between">
 
             <div class="flex items-center gap-4">
-                <h1 class="boxy-lxl">Basic</h1>
+                <h1 class="boxy-lxl"><c:out value="${roadMap.name}"/></h1>
                 <div>
                     <h3 class="text-4xl text-white mr-2">Basics
                         <span class="text-base">in</span></h3>

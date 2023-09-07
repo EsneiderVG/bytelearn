@@ -26,11 +26,14 @@ public class RoadMap extends ModeloBase {
 
     @NotNull
     @Size(min = 1, max = 200)
-    private String nombre;
+    private String name;
 
+    @Size(min = 1)
+    private String description;
+    
+    @Size(min = 1)
     private String portada;
-
-    @NotNull
+    
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "created_for")
     private Usuario createdFor;

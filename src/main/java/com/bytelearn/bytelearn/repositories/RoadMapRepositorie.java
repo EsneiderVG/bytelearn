@@ -4,4 +4,6 @@ import com.bytelearn.bytelearn.models.RoadMap;
 
 public interface RoadMapRepositorie extends RepositorioBase<RoadMap>{
     
+    RoadMap findByName(String name);
+
 }

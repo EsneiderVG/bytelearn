@@ -79,7 +79,6 @@ public class UserController {
     public String editar(Model model, @PathVariable("id") Long id, HttpSession session, Principal principal) {
         Usuario usuario = usuarioService.findById(id);
         if (!validarSession(principal)) {
-            System.out.println(principal);
             return "redirect:/login";
         } else {
             Usuario usuarioSesion = usuarioService.findByemail(principal.getName());
@@ -91,14 +90,13 @@ public class UserController {
         }
     }
 
-    @GetMapping("/{id}/edita")
+    @PostMapping("/{id}/edit")
     public String saveChanges(@PathVariable("id") Long id, @RequestParam(value = "firstName") String firstName,
             @RequestParam(value = "lastName") String lastName, @RequestParam(value = "username") String username,
             @RequestParam(value = "email") String email, HttpSession session, Principal principal,
             RedirectAttributes redirectAttributes) {
         Usuario usuario = usuarioService.findById(id);
         if (!validarSession(principal)) {
-            System.out.println(principal);
             return "redirect:/login";
         } else {
             Usuario usuarioSesion = usuarioService.findByemail(principal.getName());
@@ -121,13 +119,12 @@ public class UserController {
         }
     }
 
-    @GetMapping("/{id}/chancePassword")
+    @PostMapping("/{id}/chancePassword")
     public String changePasswords(@PathVariable("id") Long id, @RequestParam(value = "password") String password,
             @RequestParam(value = "confirmPassword") String confirmPassword, Principal principal,
             RedirectAttributes redirectAttributes) {
         Usuario usuario = usuarioService.findById(id);
         if (!validarSession(principal)) {
-            System.out.println(principal);
             return "redirect:/login";
         } else {
             Usuario usuarioSesion = usuarioService.findByemail(principal.getName());
@@ -155,7 +152,6 @@ public class UserController {
         Usuario usuario = usuarioService.findById(id);
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         if (!validarSession(principal)) {
-            System.out.println(principal);
             return "redirect:/login";
         } else {
             Usuario usuarioSesion = usuarioService.findByemail(principal.getName());

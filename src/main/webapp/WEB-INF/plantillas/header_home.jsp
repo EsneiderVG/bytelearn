@@ -12,9 +12,9 @@
         <li class="menu-item">
           <a class="sub-btn" href="#">About Us <i class="fas fa-angle-down"></i></a>
           <ul class="sub-menu">
-            <li class="sub-item"><a href="#">Sub Item 01</a></li>
+            <li class="sub-item"><a href="/about">What is Gedo?</a></li>
             <li class="sub-item"><a href="#">Sub Item 02</a></li>
-            <li class="sub-item"><a href="#">Sub Item 03</a></li>
+            <li class="sub-item"><a href="#">FaQ</a></li>
           </ul>
         </li>
         <li class="menu-item">

@@ -18,17 +18,21 @@ public class WebSecurity {
   @Value("${role_admin}")
   private String ADMIN;
 
+  
   @Bean
   SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
     http
         .csrf(Customizer.withDefaults())
         .authorizeHttpRequests((request) -> {
+            
           request
               .requestMatchers(new AntPathRequestMatcher("/"))
                 .permitAll()
               .requestMatchers(new AntPathRequestMatcher("/cursos/**"))
-                .hasAnyRole(USER, ADMIN)
+                .hasAnyRole(USER, ADMIN)   
+              .requestMatchers(new AntPathRequestMatcher("/roadmaps/**"))
+                .permitAll()  
               .anyRequest()
                 .permitAll();
         })

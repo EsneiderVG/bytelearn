@@ -106,11 +106,12 @@
       <div class="row-flex gp-50 justify-space">
         <div class="box-item w-xx">
           <h1 class="title-xxl">
-            Speed up intake and approval processes
+            ¿Qué es GDO?
           </h1>
           <p>
-            No-code workflow templates make this fast and easy to deploy. Automate tasks and approvals. Govern cost,
-            risk, and get visibility into all requests.
+            GDO es una aplicación web de enseñanza sin ánimo de lucro para todo aquel que quiera introducirse en el mundo de la programación pero no saben por dónde empezar.
+            <br><br>
+            Encontrarás una guía clara para aprender diversos temas de la programación; facilitando el acceso a la información y la documentación de este emocionante campo digital.
           </p>
           <button>See a Demo!</button>
         </div>
@@ -126,11 +127,12 @@
         </div>
         <div class="box-item w-xx">
           <h1 class="title-xxl">
-            Maximize your strategic relationships
+              Futuro y Sostenibilidad?
           </h1>
           <p>
-            Robust analytics and reporting provide critical data to strengthen negotiations and optimize relationships
-            with customers, suppliers, and partners.
+            Sabemos que el mundo está en constante evolución, por lo que no nos quedaremos atrás y junto a nuestros estudiantes estamos encaminados hacia el futuro. Las rutas de educación estarán en constante actualización así como la creación de nuevas rutas.
+            <br><br>
+            No tenemos ánimo de lucro, aceptamos donaciones para mantener el proyecto. Si nos quieres apoyar enviar un correo a elmejorproyecto@gmail.com :)
           </p>
           <button>See a Demo!</button>
         </div>

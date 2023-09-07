@@ -10,6 +10,7 @@
 
 .w-xx{
     max-width: 500px;
+    min-width: 400px;
 }
 
 .w-100{

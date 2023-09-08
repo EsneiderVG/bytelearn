@@ -93,6 +93,7 @@ a {
 .img-medium{
     object-fit: cover;
     width: 80px;
+    height: 80px;
     -webkit-box-shadow: -1px 0px 26px 1px rgba(48, 166, 235, 0.73);
     -moz-box-shadow: -1px 0px 26px 1px rgba(48, 166, 235, 0.73);
     box-shadow: -1px 0px 26px 1px rgba(48, 166, 235, 0.73);

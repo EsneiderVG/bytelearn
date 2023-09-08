@@ -13,10 +13,11 @@
           <a class="sub-btn" href="#">About Us <i class="fas fa-angle-down"></i></a>
           <ul class="sub-menu">
             <li class="sub-item"><a href="/about">What is Gedo?</a></li>
-            <li class="sub-item"><a href="#">Sub Item 02</a></li>
-            <li class="sub-item"><a href="#">FaQ</a></li>
+            <!-- <li class="sub-item"><a href="#">Sub Item 02</a></li> -->
+            <li class="sub-item"><a href="/faq">FaQ</a></li>
           </ul>
         </li>
+        
         <li class="menu-item">
           <a class="sub-btn" href="#">Contenido<i class="fas fa-angle-down"></i></a>
           <ul class="sub-menu">
@@ -26,6 +27,7 @@
             <li class="sub-item"><a href="/cursos/view">view</a></li>
           </ul>
         </li>
+
         <li class="menu-item"><a href="#">Preguntas frecuentes</a></li>
         <div class="row-flex btns-log-up">
           <c:choose>

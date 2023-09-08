@@ -29,7 +29,7 @@
   </div>
 
     <!-- Wrapper-->
-    <div class="content wrapper py-10">
+    <div class="content wrapper py-6">
         <div class="flex-col items-center gap-6">
           <div class="flex justify-between items-center pr-6">
 
@@ -62,6 +62,7 @@
         <div id="myTabContent">
             <!-- About of ruta -->
             <div class="hidden p-4" id="about" role="tabpanel" aria-labelledby="profile-tab">
+
               <c:if test = "${usuario.userType.id == 2}">
                 <div class="flex items-center text-white mb-6 gap-4">
                   <button data-modal-target="abouted" data-modal-toggle="abouted" class="button-edit p-2 rounded-lg text-white text-center cursor-pointer bg-[#30a6eb]"><i class="fa-solid fa-plus mr-2"></i>Edit About it</button>
@@ -98,8 +99,9 @@
                 </div>
               </c:if>
 
+
               <!-- Content grid -->
-              <div class="box-border max-w-7xl sm:columns-1 md:columns-1 lg:columns-3 xl:columns-2">
+              <div class="box-border sm:columns-1 md:columns-1 lg:columns-3 xl:columns-3 w-full">
                 <!-- Card-->
                 
                 <article class="mb-4 break-inside p-6 rounded-xl bg-white dark:bg-slate-800 flex flex-col bg-clip-border">

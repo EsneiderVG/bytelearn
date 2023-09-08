@@ -42,8 +42,10 @@ public class HomeController {
         return "home/AboutGedo.jsp";
     }
 
+
     @GetMapping("/index")
      String index(Principal principal, Model model, HttpSession session) {
+
         if (principal == null) {
             model.addAttribute("usuario", null);
         }else{
@@ -52,5 +54,17 @@ public class HomeController {
         }
         return "index.jsp";
     }
+  
+    @GetMapping("/faq")
+    String faqPage(Principal principal, Model model, HttpSession session){
+        if (principal == null) {
+            model.addAttribute("usuario", null);
+        }else{
+            Usuario usuario = usuarioService.findByemail(principal.getName());
+            model.addAttribute("usuario", usuario);
+        }
+        return "home/Faq.jsp";
+    }
+
 
 }

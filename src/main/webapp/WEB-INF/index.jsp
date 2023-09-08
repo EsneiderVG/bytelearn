@@ -149,7 +149,7 @@
 
     <div class="box-container mg-bt-60 mg-tp-60">
       <div class="msg-end col-flex gp-50 justify-center center-x">
-        <img src="img/terzo.svg" alt="terzo" width="105" />
+        <img src="/img/gdo-img.png" alt="terzo" width="105" />
         <h2 class="title-xxl">
           Speed to value. Get up and running in weeks, not months or years.
         </h2>

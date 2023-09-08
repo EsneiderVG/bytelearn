@@ -29,7 +29,7 @@ language="java" contentType="text/html; charset=UTF-8" %>
   </div>
 
     <!-- Wrapper-->
-    <div class="content wrapper py-10">
+    <div class="content wrapper py-6">
         <div class="flex-col items-center gap-6">
           <div class="flex justify-between items-center pr-6">
 
@@ -66,7 +66,7 @@ language="java" contentType="text/html; charset=UTF-8" %>
             <div class="hidden p-4" id="about" role="tabpanel" aria-labelledby="profile-tab">
                 
               <div class="flex items-center text-white mb-6 gap-4">
-                <span>Agrega practicas Colaborador :D</span>
+                <span>Agrega Acerca del curso Colaborador :D</span>
                 <button data-modal-target="abouted" data-modal-toggle="abouted" class="button-edit p-2 rounded-lg text-white text-center cursor-pointer bg-[#30a6eb]"><i class="fa-solid fa-plus mr-2"></i>Add About it</button>
               </div>
 
@@ -92,7 +92,7 @@ public class HelloWorld {
             </div>
 
             <!-- Container of aprende ya mismo -->
-            <div class=" hidden p-4 pt-0 rounded-lg bg-gray-50 dark:bg-gray-800" id="aprende" role="tabpanel" aria-labelledby="dashboard-tab" style="background: none;">
+            <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="aprende" role="tabpanel" aria-labelledby="dashboard-tab" style="background: none;">
                 
               <div class="flex items-center text-white mb-6 gap-4">
                 <span>Agrega contenido Colaborador :D</span>
@@ -100,7 +100,7 @@ public class HelloWorld {
               </div>
 
               <!-- Content grid -->
-              <div class="box-border max-w-7xl sm:columns-1 md:columns-1 lg:columns-3 xl:columns-2">
+              <div class="box-border sm:columns-1 md:columns-1 lg:columns-3 xl:columns-3 w-full">
                 <!-- Card-->
                 
                 <article class="mb-4 break-inside p-6 rounded-xl bg-white dark:bg-slate-800 flex flex-col bg-clip-border">

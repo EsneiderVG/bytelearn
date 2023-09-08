@@ -20,9 +20,7 @@
           <a class="sub-btn" href="#">Learn <i class="fas fa-angle-down"></i></a>
           <ul class="sub-menu">
             <li class="sub-item"><a href="/cursos">Cursos</a></li>
-            <li class="sub-item"><a href="/cursos/roadmap">roadmap</a></li>
-            <li class="sub-item"><a href="/cursos/certificate">certificado</a></li>
-            <li class="sub-item"><a href="/cursos/view">view</a></li>
+            <li class="sub-item"><a href="/cursos/roadmaps">roadmaps</a></li>
           </ul>
         </li>
         <li class="menu-item"><a href="#">Contact</a></li>

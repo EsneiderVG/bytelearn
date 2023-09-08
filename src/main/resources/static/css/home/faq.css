@@ -1,0 +1,53 @@
+/* preguntas */
+
+.text-degrade{
+    background-image: linear-gradient(#8d54ff, #30a6eb);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+.faq{
+    transition: all 0.8s;
+}
+
+.faq ul {
+    list-style: none;
+    padding: 0;
+}
+
+.boxed {
+    margin: 0px 15px 20px 25px;
+    padding: 15px;
+    border-radius: 22px;
+    box-shadow: 0 5px 25px rgba(32, 240, 255, 0.2);
+}
+
+.faq ul li h1{
+    font-size: 22px;
+}
+
+.faq .question {
+    cursor: pointer;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.faq .answer {
+    display: none;
+}
+
+.faq li.expanded .answer {
+    display: block;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq li.expanded .answer.show {
+    opacity: 1;
+    max-height: 100px;
+}

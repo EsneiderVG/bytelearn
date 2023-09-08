@@ -1,9 +1,9 @@
 <div class="overlay" id="overlay">
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
     <%@ page language="java" contentType="text/html; charset=UTF-8" %>
-    <div class="popup bg-slate-900" id="popup">
-        <a href="#" id="btn-cerrar-popup" style="color: black;" class="text-black btn-cerrar-popup">
-            <i class="fa-solid fa-x" style="color: #ffffff;"></i>
+    <div class="popup " id="popup">
+        <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup">
+            <i class="fa-solid fa-x"></i>
         </a>
         <div class="content_popu_row">
             <div class="info flex flex-col items-center justify-center gap-8">

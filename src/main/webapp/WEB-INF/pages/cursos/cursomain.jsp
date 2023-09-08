@@ -52,79 +52,24 @@ language="java" contentType="text/html; charset=UTF-8" %>
 
                 <div class="roadmaps-container my-6">
                     
-                    <div class="card-road">
-                        <button data-modal-target="python" data-modal-toggle="python"  type="button">
-                            <img class="xdimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="">
-                        </button>
-                    </div>
-                    <div class="card-road">
-                        <button data-modal-target="python" data-modal-toggle="python"  type="button">
-                            <img class="xdimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="">
-                        </button>
-                    </div>
-                    <div class="card-road">
-                        <button data-modal-target="python" data-modal-toggle="python"  type="button">
-                            <img class="xdimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="">
-                        </button>
-                    </div>
-                    <div class="card-road">
-                        <button data-modal-target="java" data-modal-toggle="java"  type="button">
-                            <img src="https://images.vexels.com/media/users/3/166401/isolated/preview/b82aa7ac3f736dd78570dd3fa3fa9e24-icono-del-lenguaje-de-programacion-java.png" alt="">
-                        </button>
-                    </div>
-                    <div class="card-road">
-                        <button data-modal-target="python" data-modal-toggle="python"  type="button">
-                            <img class="xdimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="">
-                        </button>
-                    </div>
-                    <div class="card-road">
-                        <button data-modal-target="java" data-modal-toggle="java"  type="button">
-                            <img src="https://images.vexels.com/media/users/3/166401/isolated/preview/b82aa7ac3f736dd78570dd3fa3fa9e24-icono-del-lenguaje-de-programacion-java.png" alt="">
-                        </button>
-                    </div>
-                    <div class="card-road">
-                        <button data-modal-target="python" data-modal-toggle="python"  type="button">
-                            <img class="xdimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="">
-                        </button>
-                    </div>
-                    <div class="card-road">
-                        <button data-modal-target="java" data-modal-toggle="java"  type="button">
-                            <img src="https://images.vexels.com/media/users/3/166401/isolated/preview/b82aa7ac3f736dd78570dd3fa3fa9e24-icono-del-lenguaje-de-programacion-java.png" alt="">
-                        </button>
-                    </div>
-                    <div class="card-road">
-                        <button data-modal-target="python" data-modal-toggle="python"  type="button">
-                            <img class="xdimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="">
-                        </button>
-                    </div>
-                    <div class="card-road">
-                        <button data-modal-target="java" data-modal-toggle="java"  type="button">
-                            <img src="https://images.vexels.com/media/users/3/166401/isolated/preview/b82aa7ac3f736dd78570dd3fa3fa9e24-icono-del-lenguaje-de-programacion-java.png" alt="">
-                        </button>
-                    </div>
-                    <div class="card-road">
-                        <button data-modal-target="python" data-modal-toggle="python"  type="button">
-                            <img class="xdimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="">
-                        </button>
-                    </div>
-                    <div class="card-road">
-                        <button data-modal-target="java" data-modal-toggle="java"  type="button">
-                            <img src="https://images.vexels.com/media/users/3/166401/isolated/preview/b82aa7ac3f736dd78570dd3fa3fa9e24-icono-del-lenguaje-de-programacion-java.png" alt="">
-                        </button>
-                    </div>
-                    
-                    
+                    <c:forEach var="i" items="${roadmaps}">
+                        <div class="card-road">
+                            <button data-modal-target="${i.name}" data-modal-toggle="${i.name}"  type="button">
+                                <img class="xdimg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="">
+                            </button>
+                        </div>
+                        <c:import url="popups/rutasAprendizajes.jsp">
+                            <c:param name="title" value="Welcome to ${i.name}"/>
+                            <c:param name="description" value="${i.description}"/>
+                            <c:param name="id" value="${i.id}"/>
+                            <c:param name="userFN" value="${i.createdFor.firstName}"/>
+                            <c:param name="userLN" value="${i.createdFor.lastName}"/>
+                            <c:param name="butValue" value="${i.name}"/>
+                        </c:import>  
+                    </c:forEach>
+                  
                 </div>
             </div>
-    
-            <c:import url="popups/rutasAprendizajes.jsp">
-                <c:param name="title" value="Welcome to Page 1"/>
-                <c:param name="butValue" value="python"/>
-            </c:import>  
-            <c:import url="popups/rutasAprendizajes.jsp">
-                <c:param name="title" value="Welcome to Page 2"/>
-                <c:param name="butValue" value="java"/>
-            </c:import>  
         </div>
 
         <div class="flex-col rounded-2xl mt-20 border-themes">

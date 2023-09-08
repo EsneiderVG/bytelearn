@@ -1,5 +1,6 @@
 <!-- Main modal -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
 <div id="${param.butValue}" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative w-full max-w-2xl max-h-full">
         <!-- Modal content -->
@@ -19,15 +20,15 @@
             <!-- Modal body -->
             <div class="p-6 space-y-6">
                 <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                    With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
+                    ${param.description}
                 </p>
                 <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                    The European Unions General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
+                    © 2023 ${param.userFN} ${param.userLN}. Todos los derechos de autor de esta obra están reservados y son propiedad de GDO (Guide for DevOps). Queda estrictamente prohibida la reproducción, distribución, modificación o utilización de cualquier parte de esta obra sin la autorización previa y por escrito del titular de los derechos de autor. Esta obra es una creación original protegida por las leyes de derechos de autor vigentes en EE.UU. Cualquier uso no autorizado de esta obra constituirá una infracción de los derechos de autor y podrá dar lugar a acciones legales
                 </p>
             </div>
             <!-- Modal footer -->
             <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
-                <button data-modal-hide="${param.butValue}" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Ir a la ruta</button>
+                <a href="roadmaps/${param.id}" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Ir a la ruta</a>
                 <button data-modal-hide="${param.butValue}" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">buscar otra</button>
             </div>
         </div>

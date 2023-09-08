@@ -15,7 +15,7 @@
       <ul class="menu row-flex center-x" id="content-things-responsive">
         <div class="close-btn"></div>
         <div id="insert-search-hid"></div>
-        <li class="menu-item"><a href="#">Home</a></li>
+        <li class="menu-item"><a href="/index">Home</a></li>
         <li class="menu-item">
           <a class="sub-btn" href="#">Learn <i class="fas fa-angle-down"></i></a>
           <ul class="sub-menu">

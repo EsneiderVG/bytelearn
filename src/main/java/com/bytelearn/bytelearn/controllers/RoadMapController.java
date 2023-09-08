@@ -50,10 +50,12 @@ public class RoadMapController {
     }
 
     @GetMapping("/{id}")
-    public String show(Model model, @PathVariable("id") Long id) {
+    public String show(Model model, @PathVariable("id") Long id,Principal principal) {
+        Usuario usuario = usuarioService.findByemail(principal.getName());
         RoadMap roadMap = roadMapService.findById(id);
         model.addAttribute("roadMap", roadMap);
-        return "pages/cursos/roadmap.jsp";
+        model.addAttribute("usuario", usuario);
+        return "pages/cursos/roadmaps.jsp";
     }
 
     private boolean validarRoadmapName(String name) {

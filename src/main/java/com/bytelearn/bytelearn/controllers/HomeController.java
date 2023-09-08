@@ -23,11 +23,12 @@ public class HomeController {
     String home(Principal principal, Model model, HttpSession session) {
         if (principal == null) {
             model.addAttribute("usuario", null);
+            return "index.jsp";
         }else{
             Usuario usuario = usuarioService.findByemail(principal.getName());
             model.addAttribute("usuario", usuario);
+            return "redirect:/cursos";
         }
-        return "index.jsp";
     }
 
     @GetMapping("/about")
@@ -40,4 +41,16 @@ public class HomeController {
         }
         return "home/AboutGedo.jsp";
     }
+
+    @GetMapping("/index")
+     String index(Principal principal, Model model, HttpSession session) {
+        if (principal == null) {
+            model.addAttribute("usuario", null);
+        }else{
+            Usuario usuario = usuarioService.findByemail(principal.getName());
+            model.addAttribute("usuario", usuario);
+        }
+        return "index.jsp";
+    }
+
 }

@@ -1,12 +1,12 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> <%@ page
-language="java" contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="icon" href="/img/terzo.svg">
+    <title>GDO - <c:out value="${roadMap.name}" /></title>
+    <link rel="icon" href="/img/gdo-img.png">
     <link rel="stylesheet" href="/css/cursos/roadmaps.css">
     <script src="https://kit.fontawesome.com/15c45fe034.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -36,9 +36,7 @@ language="java" contentType="text/html; charset=UTF-8" %>
             <div class="flex items-center mx-4 text-white">
               <img src="/img/java.svg" style="width: 60px; height: 60px;" alt="">
               <div class="flex items-center">
-                <h3 class="text-4xl ml-2 font-bold">Java</h3>
-                <span class="text-base mx-4">in</span>
-                <h3 class="text-4xl">POO</h3>
+                <h3 class="text-4xl ml-2 font-bold"> <c:out value="${roadMap.name}" /></h3>
               </div>
   
               <span class="ml-12"> <i class="fa-solid fa-user mr-2"></i> 100.234 estudiantes</span>
@@ -64,11 +62,11 @@ language="java" contentType="text/html; charset=UTF-8" %>
         <div id="myTabContent">
             <!-- About of ruta -->
             <div class="hidden p-4" id="about" role="tabpanel" aria-labelledby="profile-tab">
-                
-              <div class="flex items-center text-white mb-6 gap-4">
-                <span>Agrega practicas Colaborador :D</span>
-                <button data-modal-target="abouted" data-modal-toggle="abouted" class="button-edit p-2 rounded-lg text-white text-center cursor-pointer bg-[#30a6eb]"><i class="fa-solid fa-plus mr-2"></i>Add About it</button>
-              </div>
+              <c:if test = "${usuario.userType.id == 2}">
+                <div class="flex items-center text-white mb-6 gap-4">
+                  <button data-modal-target="abouted" data-modal-toggle="abouted" class="button-edit p-2 rounded-lg text-white text-center cursor-pointer bg-[#30a6eb]"><i class="fa-solid fa-plus mr-2"></i>Edit About it</button>
+                </div>
+              </c:if>
 
               <div class="flex items-center p-4 rounded-lg gap-12 bg-gray-50 dark:bg-gray-800">
                 <div>
@@ -78,13 +76,13 @@ language="java" contentType="text/html; charset=UTF-8" %>
                   Voluptates tempora dignissimos blanditiis sapiente molestiae eum vitae omnis quasi, libero dolorem, eligendi ex iste ad quis commodi expedita vel? Quidem mollitia dicta qui saepe vero explicabo dolorum quo fuga!</p>
                 </div>
                 <div class="coding-container rounded-lg">
-<pre style="background: white;"><code class="language-java py-0" >
-public class HelloWorld {
-  public static void main(String[] args) {
-    System.out.println("Hello, World!");
-  }
-}
-</code></pre>
+                <pre style="background: white;"><code class="language-java py-0" >
+                    public class HelloWorld {
+                      public static void main(String[] args) {
+                        System.out.println("Hello, World!");
+                      }
+                    }
+                </code></pre>
                 </div>
 
               </div>
@@ -93,11 +91,12 @@ public class HelloWorld {
 
             <!-- Container of aprende ya mismo -->
             <div class=" hidden p-4 pt-0 rounded-lg bg-gray-50 dark:bg-gray-800" id="aprende" role="tabpanel" aria-labelledby="dashboard-tab" style="background: none;">
-                
-              <div class="flex items-center text-white mb-6 gap-4">
-                <span>Agrega contenido Colaborador :D</span>
-                <button id="btn-abrir-popup" class="button-edit p-2 rounded-lg text-white text-center cursor-pointer bg-[#30a6eb]"><i class="fa-solid fa-plus mr-2"></i>Add Keyword</button>
-              </div>
+
+              <c:if test = "${usuario.userType.id == 2}">
+                <div class="flex items-center text-white mb-6 gap-4">
+                  <button id="btn-abrir-popup" class="button-edit p-2 rounded-lg text-white text-center cursor-pointer bg-[#30a6eb]"><i class="fa-solid fa-plus mr-2"></i>Add a new Keyboard</button>
+                </div>
+              </c:if>
 
               <!-- Content grid -->
               <div class="box-border max-w-7xl sm:columns-1 md:columns-1 lg:columns-3 xl:columns-2">
@@ -487,12 +486,11 @@ public class HelloWorld {
             
             <div class="hidden p-4 rounded-lg bg-transparent" id="practice" role="tabpanel" aria-labelledby="settings-tab">
               
-              
+              <c:if test = "${usuario.userType.id == 2}">
               <div class="flex items-center text-white mb-6 gap-4">
-                <span>Agrega practicas Colaborador :D</span>
                 <button data-modal-target="practica" data-modal-toggle="practica" class="button-edit p-2 rounded-lg text-white text-center cursor-pointer bg-[#30a6eb]"><i class="fa-solid fa-plus mr-2"></i>Add Practices</button>
               </div>
-
+              </c:if>
               <div class="grid grid-rows-2 grid-flow-col gap-4">
                 <div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                   <a href="#">

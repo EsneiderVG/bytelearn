@@ -1,7 +1,7 @@
 <div class="overlay" id="overlay">
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
     <%@ page language="java" contentType="text/html; charset=UTF-8" %>
-    <div class="popup " id="popup">
+    <div class="popup dark:bg-gray-700" id="popup">
         <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup">
             <i class="fa-solid fa-x"></i>
         </a>
@@ -30,9 +30,6 @@
                     <div class="mb-6">
                       <label for="nombre_ruta" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre de la ruta</label>
                       <input type="text" id="nombre_ruta" name="name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
-                      <p class="text-red-600">
-                          <c:out value="${roadmapName}"/>
-                      </p>
                     </div>
                     <div class="mb-6">
                       <label for="descripcion" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descripcion</label>

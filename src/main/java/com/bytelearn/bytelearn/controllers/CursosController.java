@@ -7,11 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.bytelearn.bytelearn.models.CursosDeUsuarios;
 import com.bytelearn.bytelearn.models.RoadMap;
 import com.bytelearn.bytelearn.models.Usuario;
+import com.bytelearn.bytelearn.services.CursosDeUsuariosService;
 import com.bytelearn.bytelearn.services.RoadMapService;
 import com.bytelearn.bytelearn.services.UsuarioService;
 
@@ -25,6 +28,8 @@ public class CursosController {
     UsuarioService usuarioService;
     @Autowired
     RoadMapService roadMapService;
+    @Autowired
+    CursosDeUsuariosService cursosDeUsuariosService;
 
     @GetMapping("/view")
     String cursoView(@RequestParam(value = "type", defaultValue = "0") int typeSection, Model model) {
@@ -46,11 +51,15 @@ public class CursosController {
         return "pages/cursos/cursomain.jsp";
     }
 
-    @GetMapping("/roadmap")
-    String roadMapPage(Principal principal, Model model, HttpSession session) {
+    @GetMapping("/join/{id}")
+    public String join (Model model, @PathVariable("id") Long id,Principal principal){
         Usuario usuario = usuarioService.findByemail(principal.getName());
-        model.addAttribute("usuario", usuario);
-        return "pages/cursos/roadmap.jsp";
+        RoadMap uRoadMap = roadMapService.findById(id);
+        CursosDeUsuarios cursoDeUsuario = new CursosDeUsuarios();
+        cursoDeUsuario.setUsuario(usuario);
+        cursoDeUsuario.setCurso(uRoadMap);
+        cursosDeUsuariosService.save(cursoDeUsuario); 
+        return "redirect:/user/" + usuario.getId();
     }
 
 }

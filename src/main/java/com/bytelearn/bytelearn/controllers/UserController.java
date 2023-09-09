@@ -1,6 +1,7 @@
 package com.bytelearn.bytelearn.controllers;
 
 import java.security.Principal;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,9 +17,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.bytelearn.bytelearn.models.CursosDeUsuarios;
 import com.bytelearn.bytelearn.models.TiposUsarios;
 import com.bytelearn.bytelearn.models.Usuario;
 import com.bytelearn.bytelearn.security.DetallesSeguridadUsuarios;
+import com.bytelearn.bytelearn.services.CursosDeUsuariosService;
 import com.bytelearn.bytelearn.services.TipoUsuarioService;
 import com.bytelearn.bytelearn.services.UsuarioService;
 import com.bytelearn.bytelearn.validator.usuarioValidator;
@@ -40,6 +43,8 @@ public class UserController {
     TipoUsuarioService tipoUsuarioService;
     @Autowired
     DetallesSeguridadUsuarios securityUserDetails;
+     @Autowired
+    CursosDeUsuariosService cursosDeUsuariosService;
 
     @Value("${role_user}")
     private String USER_ROLE;
@@ -71,6 +76,8 @@ public class UserController {
     @GetMapping("/{id}")
     public String perfil(Model model, @PathVariable("id") Long id) {
         Usuario usuario = usuarioService.findById(id);
+        List<CursosDeUsuarios> cursos = cursosDeUsuariosService.findByUsuario(usuario);
+        model.addAttribute("cursos", cursos); 
         model.addAttribute("usuario", usuario);
         return "pages/perfilU/perfil_usuario.jsp";
     }

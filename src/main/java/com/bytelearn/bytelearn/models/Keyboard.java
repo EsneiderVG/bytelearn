@@ -30,9 +30,6 @@ public class Keyboard {
     @Size(min = 1, max = 200)
     private String name;
 
-    @Size(min = 1)
-    private String description;
-
     @OneToMany(mappedBy = "keyboard", fetch = FetchType.LAZY)
     private List<RutesOrder> rutesOrders;
 

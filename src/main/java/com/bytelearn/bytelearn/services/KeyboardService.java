@@ -20,5 +20,14 @@ public class KeyboardService extends ServicioBase<Keyboard>{
     public void saveAll(List<Keyboard> keyboards){
         keyboardRepositorie.saveAll(keyboards);
     }
+
+    public Keyboard findByName(String name){
+        Keyboard Keyboard = keyboardRepositorie.findByName(name);
+        if(Keyboard != null){
+            return Keyboard;
+        }else{
+            return null;
+        }
+    }
     
 }

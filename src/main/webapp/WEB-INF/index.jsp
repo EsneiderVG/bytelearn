@@ -102,7 +102,7 @@
       </div>
     </div>
 
-    <div class="box-container mg-bt-20">
+    <div class="box-container mg-bt-20" id="gdo">
       <div class="row-flex gp-50 justify-space">
         <div class="box-item w-xx">
           <h1 class="title-xxl">

@@ -33,7 +33,7 @@
         </div>
 
         <!-- Wrapper-->
-        <div class="content wrapper py-6">
+        <div class="content wrapper py-6 w-full">
           <div class="flex-col items-center gap-6">
             <div class="flex justify-between items-center pr-6">
 
@@ -96,7 +96,7 @@
                   </div>
                 </c:if>
 
-                <div class="flex items-center text-white p-4 rounded-lg gap-12 bg-gray-50 dark:bg-gray-800">
+                <div class="flex items-center p-4 rounded-lg gap-12 bg-gray-50 dark:bg-gray-800">
                   <div>
                     <h2 class="text-2xl font-bold my-2">About</h2>
                     <p class="">
@@ -114,11 +114,11 @@
                   </div>
                   <div class="coding-container rounded-lg">
                     <pre style="background: white;"><code class="language-java py-0" >
-                    public class HelloWorld {
-                      public static void main(String[] args) {
-                        System.out.println("Hello, World!");
-                      }
-                    }
+public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println("Hello, World!");
+  }
+}
                 </code></pre>
                   </div>
 

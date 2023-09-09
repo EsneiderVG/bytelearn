@@ -1,3 +1,7 @@
+var correoInvalido = "este correo ya esta en uso por favor usa otro";
+var usernameInvalido = "este username ya esta en uso por favor usa otro";
+var passwordDiferente = "las contraseñas no coinciden";
+
 function createNombreCampos(elementsInput){
     const nombresDeCampos = [];
 
@@ -16,9 +20,17 @@ function createNombreCampos(elementsInput){
 function createMensajesUnicos (data){
     const mensajesUnicos = {};
     data.forEach((dataOn) => {
-        const { field, defaultMessage } = dataOn;
+        const { field, defaultMessage, code } = dataOn;
         if (!mensajesUnicos[field]) {
-            mensajesUnicos[field] = defaultMessage;
+            if(code == "correoInvalido"){
+                mensajesUnicos[field] = correoInvalido;
+            }else if(code == "usernameInvalido"){
+                mensajesUnicos[field] = usernameInvalido;
+            }else if(code == "passwordDiferente"){
+                mensajesUnicos[field] = passwordDiferente;
+            }else{
+                mensajesUnicos[field] = defaultMessage;
+            }
         }
     });
     return mensajesUnicos;
@@ -47,8 +59,8 @@ function resetValues(nombresDeCampos){
     }
 }
 
-function realTimeValidation(nameId){
-    const form = document.getElementById(nameId);
+// se adapto para no mas el register
+    const form = document.getElementById("registerUser");
     form.addEventListener("submit", (event) => {
     event.preventDefault();
     const formData = new FormData(form);
@@ -61,12 +73,34 @@ function realTimeValidation(nameId){
         })
 
         .then((data) => {
+        // console.log(data);
         const elementosInput = form.querySelectorAll("input");
         const nombresDeCampos = createNombreCampos(elementosInput);
         // success point
         if (data.length == 0) {
             resetValues(nombresDeCampos);
-            
+            fetch('/new', {
+                method: 'POST',
+                body: formData
+            })
+            .then(function(response) {
+                if (response.ok) {
+                // console.log(response);
+                return response.text(); // Si la respuesta es exitosa, obtenemos el contenido de texto
+                } else {
+                throw new Error('Error en la solicitud POST');
+                }
+            })
+            .then((data) => {
+                // document.body.innerHTML = data;
+                // console.log(data);
+                window.location.href = data;
+                return false;
+
+            })
+            .catch(function(error) {
+                console.error('Error:', error);
+            });
             // error point
         } else {
             // console.log(data);
@@ -75,4 +109,4 @@ function realTimeValidation(nameId){
         }
         });
     });
-}
+

@@ -54,24 +54,24 @@ public class UserController {
         return "pages/login/login.jsp";
     }
 
-    @PostMapping("/new")
-    public String createUser(@Valid @ModelAttribute(value = "registroUsuario") Usuario usuarioSingup,
-            BindingResult results, HttpServletRequest request) throws ServletException {
-        usuarioValidator.validate(usuarioSingup, results);
-        if (results.hasErrors()) {
-            return "pages/login/login.jsp";
-        }
+    // @PostMapping("/new")
+    // public String createUser(@Valid @ModelAttribute(value = "registroUsuario") Usuario usuarioSingup,
+    //         BindingResult results, HttpServletRequest request) throws ServletException {
+    //     usuarioValidator.validate(usuarioSingup, results);
+    //     if (results.hasErrors()) {
+    //         return "pages/login/login.jsp";
+    //     }
 
-        TiposUsarios tipoDeUsuario = tipoUsuarioService.findByNameContaining(USER_ROLE);
-        usuarioSingup.setUserType(tipoDeUsuario);
+    //     TiposUsarios tipoDeUsuario = tipoUsuarioService.findByNameContaining(USER_ROLE);
+    //     usuarioSingup.setUserType(tipoDeUsuario);
 
-        String encodedPassword = securityUserDetails.bCryptPasswordEncoder().encode(usuarioSingup.getPassword());
-        usuarioSingup.setPassword(encodedPassword);
-        usuarioSingup.setImagenPerfil("/img/perfil.jpg");
-        usuarioService.save(usuarioSingup);
-        request.login(usuarioSingup.getEmail(), usuarioSingup.getConfirmPassword());
-        return "redirect:/cursos";
-    }
+    //     String encodedPassword = securityUserDetails.bCryptPasswordEncoder().encode(usuarioSingup.getPassword());
+    //     usuarioSingup.setPassword(encodedPassword);
+    //     usuarioSingup.setImagenPerfil("/img/perfil.jpg");
+    //     usuarioService.save(usuarioSingup);
+    //     request.login(usuarioSingup.getEmail(), usuarioSingup.getConfirmPassword());
+    //     return "redirect:/cursos";
+    // }
 
     @GetMapping("/{id}")
     public String perfil(Model model, @PathVariable("id") Long id) {

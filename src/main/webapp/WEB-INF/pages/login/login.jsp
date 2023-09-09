@@ -9,6 +9,7 @@
     <title>Login - ByteLearn</title>
     <link rel="stylesheet" href="/css/login/login.css">
     <script src="https://kit.fontawesome.com/15c45fe034.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
   <%@ include file="../../plantillas/header_home.jsp" %>
@@ -94,7 +95,7 @@
             </div>  
     
             
-            <input class="button_blue" type="submit" value="Registrar">
+            <input class="button_blue" type="submit" value="Registrar" >
            
             <div class="text sign-up-text">Ya tienes una cuenta? <label for="flip">Ingresa ahora</label></div>
           </form:form>
@@ -110,6 +111,6 @@
   <%@ include file="../../plantillas/footer.jsp" %>
   <script src="/js/login.js"></script>
   <script src="/js/popup.js"></script>
-
+  <script src="/js/validateRealTime.js"></script>
 </body>
 </html>

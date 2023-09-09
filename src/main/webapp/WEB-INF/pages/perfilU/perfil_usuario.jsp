@@ -58,58 +58,27 @@
                 <div class="curses-container rounded-md flex-col justify-around py-4 px-8">
                     <h1 class="text-2xl px-8 pt-6">Cursos en curso:</h1>
                     <div class="cards-list">
-
-                        <div class="card 1">
-                            <div class="card_image">
-                                <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
-                            </div>
-
-                            <div class="info-course px-4">
-                                <div class="card_title title-white text-2xl px-4 pt-4">
-                                    <p>Python Avanzado en POO</p>
-                                </div>
-                                <div class="progress-text">
-                                    <p class="px-4 pt-4">Curso actualmente en: 50%</p>
-                                    <div class="progress-cont px-4 mt-4">
-                                        <div class="progress"></div>
+                        <c:forEach var="i" items="${cursos}">
+                            <a href="/roadmaps/${i.curso.id}">
+                                <div class="card 1">
+                                    <div class="card_image">
+                                        <img src="https://i.redd.it/b3esnz5ra34y.jpg" />
+                                    </div>
+                                    
+                                    <div class="info-course px-4">
+                                        <div class="card_title title-white text-2xl px-4 pt-4">
+                                        <p> <c:out value="${i.curso.name}" /></p>
+                                    </div>
+                                    <div class="progress-text">
+                                        <p class="px-4 pt-4">Curso actualmente en: 50%</p>
+                                        <div class="progress-cont px-4 mt-4">
+                                            <div class="progress"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card 2">
-                            <div class="card_image">
-                                <img src="https://media.giphy.com/media/10SvWCbt1ytWCc/giphy.gif" />
-                            </div>
-
-                            <div class="info-course px-4">
-                                <div class="card_title title-white text-2xl px-4 pt-4">
-                                    <p>Python Avanzado en POO</p>
-                                </div>
-                                <div class="progress-text">
-                                    <p class="px-4 pt-4">Curso actualmente en: 50%</p>
-                                    <div class="progress-cont px-4 mt-4">
-                                        <div class="progress"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card 3">
-                            <div class="card_image">
-                                <img src="https://media.giphy.com/media/LwIyvaNcnzsD6/giphy.gif" />
-                            </div>
-
-                            <div class="info-course px-4">
-                                <div class="card_title title-white text-2xl px-4 pt-4">
-                                    <p>Python Avanzado en POO</p>
-                                </div>
-                                <div class="progress-text">
-                                    <p class="px-4 pt-4">Curso actualmente en: 50%</p>
-                                    <div class="progress-cont px-4 mt-4">
-                                        <div class="progress"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </a>
+                        </c:forEach>
                     </div>
                 </div>
             </div>

@@ -142,6 +142,7 @@ public class HelloWorld {
                 <div class="box-border sm:columns-1 md:columns-1 lg:columns-3 xl:columns-3 w-full">
                   <!-- Card-->
                   <c:forEach var="i" items="${keyboards}">
+                    <c:if test="${roadMap.id == i.roadMap.id}">   
                     <article
                       class="mb-4 break-inside p-6 rounded-xl bg-white dark:bg-slate-800 flex flex-col bg-clip-border">
                       <div class="flex pb-6 items-center justify-between">
@@ -173,9 +174,11 @@ public class HelloWorld {
                     <li>Variables de entorno</li>
                     <li>Convicciones</li>
                   </ul> -->
-                      <a href="/keyboards/${i.id}"
+                      <a href="/keyboards/${i.keyboard.id}/${i.id}"
                         class="button-edit p-2 rounded-lg text-white text-center mt-4 cursor-pointer bg-[#30a6eb]">Explorar</a>
                     </article>
+                    
+                  </c:if>
                   </c:forEach>
                   <!-- End Card -->
                 </div>

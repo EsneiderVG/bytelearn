@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/css/plantillas/header_home.css">
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
 <header>
     <div class="logo row-flex center-x">
       <img src="/img/gdo-img.png" alt="Imagen del logo" width="35" />
@@ -8,13 +9,13 @@
     <div class="navigation">
       <ul class="menu row-flex center-x">
         <div class="close-btn"></div>
-        <li class="menu-item"><a href="#gdo">Por que Gdo?</a></li>
+        <li class="menu-item"><a href="#gdo">¿Por qué Gdo?</a></li>
         <li class="menu-item">
           <a class="sub-btn" href="#">Acerca<i class="fas fa-angle-down ml-2"></i></a>
           <ul class="sub-menu">
-            <li class="sub-item"><a href="/about">Que es Gedo?</a></li>
+            <li class="sub-item"><a href="/about">¿Qué es Gdo?</a></li>
             <!-- <li class="sub-item"><a href="#">Sub Item 02</a></li> -->
-            <li class="sub-item"><a href="/faq">FaQ</a></li>
+            <li class="sub-item"><a href="/faq">FAQ</a></li>
           </ul>
         </li>
         

@@ -54,7 +54,7 @@
             </div>
             <div class="text sign-up-text">
               <span><img src="assets/img/dowload.png" alt="" srcset=""></span>
-              <span class="soporte" id="btn-abrir-popup">Ayuda Sporte Tecnico</span>
+              <span class="soporte" id="btn-abrir-popup">Ayuda Soporte Tecnico</span>
             </div>
           </form>
         </div>

@@ -45,7 +45,7 @@
 
     </div>
     <div class="cont-footer foot-down row-flex justify-space gp-50">
-      <p>copywrite @2023 Esneider VG</p>
+      <p>copywrite @2023 GDO</p>
       <p>social@terzocloud.com</p>
       <p>Privacy Policy</p>
     </div>

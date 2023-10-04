@@ -57,7 +57,7 @@
                 </div>
                 <div class="curses-container rounded-md flex-col justify-around py-4 px-8">
                     <h1 class="text-2xl px-8 pt-6">Cursos en curso:</h1>
-                    <div class="cards-list">
+                    <div class="cards-list gap-12">
                         <c:forEach var="i" items="${cursos}">
                             <a href="/roadmaps/${i.curso.id}">
                                 <div class="card 1">

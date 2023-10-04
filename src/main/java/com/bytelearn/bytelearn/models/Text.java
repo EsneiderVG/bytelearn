@@ -18,6 +18,9 @@ import lombok.Setter;
 public class Text extends ModeloBase {
 
     @Size(min = 1)
+    private String titulo;
+
+    @Size(min = 1)
     private String parrafo;
 
     @Size(min = 1)

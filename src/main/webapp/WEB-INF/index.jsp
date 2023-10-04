@@ -48,22 +48,20 @@
       </div>
     </div>
 
-    <div class="box-container pd-20 mg-bt-60">
+    <!-- <div class="box-container pd-20 mg-bt-60">
       <div class="row-flex gp-50">
         <div class="box-item">
-          <h1 class="porcent-text-card">3x</h1>
-          <span class="sub-text-porcent">Costs</span>
+          <h1 class="porcent-text-card">3</h1>
+          <span class="sub-text-porcent">De cada 10 personas</span>
           <p>
-            Discover data across your contract ecosystem to drive savings and
-            reduce risk through Terzo AI
+            Quieren empezar en el mundo TI y no saben como.
           </p>
         </div>
         <div class="box-item">
-          <h1 class="porcent-text-card">10%+</h1>
-          <span class="sub-text-porcent">Costs</span>
+          <h1 class="porcent-text-card">0</h1>
+          <span class="sub-text-porcent">Costos</span>
           <p>
-            Discover data across your contract ecosystem to drive savings and
-            reduce risk through Terzo AI
+            Gdo es un aplicativo sin animo de lucro en el cual puedes aprender sobre el mundo TI.
           </p>
         </div>
         <div class="box-item">
@@ -75,14 +73,14 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="cont-sep row-flex-sep justify-center gp-20">
       <div class="separeted-circle"></div>
       <div class="separeted"></div>
     </div>
 
-    <div class="box-container  mg-bt-60">
+    <!-- <div class="box-container  mg-bt-60">
       <div class="col-flex">
         <div class="box-item w-100" style="text-align: center">
           <h1 class="title-xxl">
@@ -100,7 +98,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="box-container mg-bt-20" id="gdo">
       <div class="row-flex gp-50 justify-space">
@@ -113,7 +111,9 @@
             <br><br>
             Encontrarás una guía clara para aprender diversos temas de la programación; facilitando el acceso a la información y la documentación de este emocionante campo digital.
           </p>
-          <button>See a Demo!</button>
+          <form action="/about">
+            <button>ver más</button>
+          </form>
         </div>
         <div class="box-item circle-bck">
           <img src="img/intake.jpg" alt="Contability" />
@@ -127,14 +127,16 @@
         </div>
         <div class="box-item w-xx">
           <h1 class="title-xxl">
-              Futuro y Sostenibilidad?
+            Futuro y Sostenibilidad
           </h1>
           <p>
             Sabemos que el mundo está en constante evolución, por lo que no nos quedaremos atrás y junto a nuestros estudiantes estamos encaminados hacia el futuro. Las rutas de educación estarán en constante actualización así como la creación de nuevas rutas.
             <br><br>
-            No tenemos ánimo de lucro, aceptamos donaciones para mantener el proyecto. Si nos quieres apoyar enviar un correo a elmejorproyecto@gmail.com :)
+            No tenemos ánimo de lucro, aceptamos donaciones para mantener el proyecto. Si nos quieres apoyar enviar un correo a elmejorproyecto@gmail.com :D
           </p>
-          <button>See a Demo!</button>
+          <form action="/faq">
+            <button>preguntas frecuentes</button>
+          </form>
         </div>
 
       </div>
@@ -151,9 +153,9 @@
       <div class="msg-end col-flex gp-50 justify-center center-x">
         <img src="/img/gdo-img.png" alt="terzo" width="105" />
         <h2 class="title-xxl">
-          Speed to value. Get up and running in weeks, not months or years.
+          Construye Tu Mañana Hoy y Aprende sin Límites
         </h2>
-        <button>Book a demo</button>
+        <!-- <button>Book a demo</button> -->
       </div>
 
     </div>

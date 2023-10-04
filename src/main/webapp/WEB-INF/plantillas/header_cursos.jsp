@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
 <link rel="stylesheet" href="/css/plantillas/header_cursos.css">
 <header>
     <div class="logo row-flex center-x">
@@ -20,10 +21,10 @@
           <a class="sub-btn" href="#">Learn <i class="fas fa-angle-down"></i></a>
           <ul class="sub-menu">
             <li class="sub-item"><a href="/cursos">Cursos</a></li>
-            <li class="sub-item"><a href="/cursos/roadmaps">roadmaps</a></li>
+            <!-- <li class="sub-item"><a href="/cursos/roadmaps">roadmaps</a></li> -->
           </ul>
         </li>
-        <li class="menu-item"><a href="#">Contact</a></li>
+        <!-- <li class="menu-item"><a href="#">Contact</a></li> -->
         <div class="account-section">
           <img src="${usuario.imagenPerfil}" alt="" class="rounded-full ml-6 h-12 cursor-pointer popup-perfil-head" onclick="toggleSlideover()" title="perfil de usuario">
           <!-- <i class="fa-solid fa-user" ></i> -->

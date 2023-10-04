@@ -48,7 +48,7 @@
               </div>
               <div class="box-item w-xx">
                 <h1 class="title-xxl">
-                    Futuro de Gedo?
+                    Futuro de Gdo?
                 </h1>
                 <p>
                   Sabemos que el mundo está en constante evolución, por lo que no nos quedaremos atrás y junto a nuestros estudiantes estamos encaminados hacia el futuro. Las rutas de educación estarán en constante actualización así como la creación de nuevas rutas.
